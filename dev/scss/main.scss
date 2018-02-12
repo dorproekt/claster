@@ -1,8 +1,199 @@
-@import "reset";
-@import "grid";
+@import "smart-grid";
 @import "fonts";
+@import "../libs/Font-Awesome/web-fonts-with-css/css/fontawesome-all.css";
+/*@import "../libs/Font-Awesome/web-fonts-with-css/scss/fontawesome.scss";*/
+
+@include reset();
+
+$white: #fff;
+$black: #000f26;
+$blue: #00a1e1;
+$blue2: #94e0fe;
 
 body{
-    font-family: Roboto;
+    font-family: Roboto, Verdana;
     font-size: 14px;
+}
+
+.btn{
+    color: $white;
+    font-size: 20px;
+    @include xs(font-size, 12px);
+    text-transform: uppercase;
+    text-decoration: none;
+    background-color:$blue; 
+    padding: 20px 75px;
+    @include lg(padding, 10px 50px);
+    @include xs(padding, 5px 20px);
+    border-radius: 35px;
+    &:hover{
+        text-decoration: underline;
+    }
+}
+
+header{
+    
+    .top-header{
+        @include wrapper-full();
+        background-color: $black;
+        color: $white;
+        font-size: 18px;
+        text-transform: uppercase;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: stretch;
+        
+        div{
+            display: flex;
+            align-items: center;
+            padding: 5px 0;
+        }
+        
+        .logo{
+            
+        }
+        
+        .telephones{
+            img{
+                margin-right: 10px;
+            }
+        }
+        
+        .request-call{
+            background-color: $blue;
+            font-weight: 500;
+            cursor: pointer;
+            padding: 0 40px;
+        }
+        
+        .search{
+            cursor: pointer;
+        }
+        
+        .basket{
+            display: flex;
+            align-items: center;
+            background-color: $blue;
+            padding: 0 20px;
+            img{
+                margin-right: 10px;
+            }
+        }
+        
+        .compare{
+            img{
+                margin-right: 15px;
+            }
+            
+        }
+        
+        .language{
+            img{
+                margin-left: 10px;
+            }
+        }
+    }
+    
+}
+
+main{
+    #slider{
+        .slide{
+            position: relative;
+            
+            img{
+                width: 100%;
+            }
+            .content{
+                position: absolute;
+                top: 20%;
+                @include lg(top, 15%);
+                @include md(top, 10%);
+                @include xs(top, 25%);
+                right: 100px;
+                @include xs(right, 5px);
+                z-index: 1001;
+                width: 40%;
+                @include xs(width, 55%);
+                h2{
+                    color: $blue2;
+                    font-size: 45px;
+                    @include lg(font-size, 30px);
+                    @include md(font-size, 22px);
+                    @include xs(font-size, 14px);
+                    @include xs(text-align, center);
+                    font-weight: 500;
+                }
+                
+                p{
+                    color: $white;
+                    font-size: 18px;
+                    @include md(font-size, 16px);
+                    text-align: justify;
+                    margin: 20px 0 50px 0;
+                    @include lg(margin, 20px 0 25px 0);
+                    @include md(margin, 10px 0 15px 0);
+                    @include xs(display, none);
+                    line-height: 30px;
+                    @include md(line-height, 22px);
+                }
+                div{
+                    text-align: center;
+                    padding: 20px 0;
+                }
+            }
+        }
+
+        .slick-slide {
+            &:focus, a {
+                outline: none;
+            }
+        }
+        img.control.slick-arrow{
+            position: absolute;
+            z-index: 1000;
+            bottom: 30px;
+            @include xs(bottom, 5px);
+            @include xs(width, 15px);
+            cursor: pointer;
+        }
+        
+        img.control.next.slick-arrow{
+            right: 100px;
+            @include xs(right, 30px);
+        }
+
+        img.control.prev.slick-arrow{
+            right: 40px;
+            @include xs(right, 10px);
+        }
+        
+        .slick-dots li.slick-active button:before {
+            opacity: 1.0;
+            color: $blue;
+        }
+        .slick-dots li {
+            @include xs(width, 5px);
+        }
+        
+        .slick-dots li.slick-active button:before {
+            font-size: 20px;
+            @include xs(font-size, 10px);
+        }
+        .slick-dots li button:before {
+            font-size: 10px;
+            @include xs(font-size, 5px);
+            color: $white;
+            opacity: 1;
+        }
+        
+        .slick-dots li:hover button:before{
+            color: $blue;
+        }
+        .slick-dots {
+            bottom: 30px;
+            @include xs(bottom, 0px);
+        }
+    }
 }
