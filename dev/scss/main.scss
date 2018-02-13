@@ -9,6 +9,7 @@ $white: #fff;
 $black: #000f26;
 $blue: #00a1e1;
 $blue2: #94e0fe;
+$gray: #747474;
 
 body{
     font-family: Roboto, Verdana;
@@ -32,8 +33,13 @@ body{
 }
 
 header{
+    @include md(display, flex);
+    @include md(align-items, center);
+    @include md(background-color, $black);
     
     .top-header{
+        @include md(flex-grow, 1);
+        @include md(order, 2);
         @include wrapper-full();
         background-color: $black;
         color: $white;
@@ -58,6 +64,9 @@ header{
             img{
                 margin-right: 10px;
             }
+            p{
+                @include md(display, none);
+            }
         }
         
         .request-call{
@@ -65,6 +74,7 @@ header{
             font-weight: 500;
             cursor: pointer;
             padding: 0 40px;
+            @include md(display, none);
         }
         
         .search{
@@ -79,9 +89,13 @@ header{
             img{
                 margin-right: 10px;
             }
+            p{
+               @include md(display, none); 
+            }
         }
         
         .compare{
+            @include md(display, none); 
             img{
                 margin-right: 15px;
             }
@@ -91,6 +105,82 @@ header{
         .language{
             img{
                 margin-left: 10px;
+            }
+        }
+    }
+    
+    nav{
+        @include md(flex-grow, 0);
+        @include md(order, 1);
+        
+        @include wrapper-full();
+        
+        .navbar-toggler{
+            font-size: 26px;
+            display: none;
+            color: $white;
+            @include md(display, block);
+        }
+        .menu{
+            @include md(display, none);
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            li.item{
+                position: relative;
+                padding: 24px 0;
+                a{
+                    color: $gray;
+                    text-decoration: none;
+                    text-transform: uppercase;
+                    font-size: 16px;
+                    @include lg(font-size, 14px);
+                    padding: 25px 0;
+                    i{
+                        margin-left: 10px;
+                        @include lg(margin-left, 5px);
+                    }
+                    &:hover{
+                        color: $blue;
+                    }
+
+                }
+                .arrow-up {
+                    width: 0px;
+                    height: 0px;
+                    border-left: 5px solid transparent;
+                    border-right: 5px solid transparent;
+                    border-bottom: 5px solid $blue;
+                    position: absolute;
+                    left: 50%;
+                    bottom: 0;
+                    display: none;
+                }
+                .submenu{
+                    position: absolute;
+                    background: $white;
+                    top: 100%;
+                    z-index: 2000;
+                    width: 520px;
+                    border-top: solid 3px $blue;
+                    display: none;
+                    flex-wrap: wrap;
+                    padding-bottom: 25px;
+                   
+                    li{
+                        list-style-type: none;
+                        flex-basis: 260px;
+                        margin-top: 25px;
+                        a{
+                            text-transform: none;
+                            margin-left: 20px;
+                            i{
+                                margin-right: 10px;
+                                color: $blue;
+                            }
+                        }
+                    }
+                }
             }
         }
     }
@@ -194,6 +284,18 @@ main{
         .slick-dots {
             bottom: 30px;
             @include xs(bottom, 0px);
+        }
+    }
+    .our-products{
+        @include wrapper-full();
+        text-align: center;
+        h3{
+            color: $blue;
+            font-size: 30px;
+            margin: 40px 0;
+        }
+        p{
+            font-size: 18px;
         }
     }
 }
