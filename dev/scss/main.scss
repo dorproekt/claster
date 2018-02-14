@@ -10,6 +10,7 @@ $black: #000f26;
 $blue: #00a1e1;
 $blue2: #94e0fe;
 $gray: #747474;
+$gray-light: #f7f8f8;
 
 body{
     font-family: Roboto, Verdana;
@@ -23,9 +24,6 @@ body{
     text-transform: uppercase;
     text-decoration: none;
     background-color:$blue; 
-    padding: 20px 75px;
-    @include lg(padding, 10px 50px);
-    @include xs(padding, 5px 20px);
     border-radius: 35px;
     &:hover{
         text-decoration: underline;
@@ -231,6 +229,11 @@ main{
                 div{
                     text-align: center;
                     padding: 20px 0;
+                    .btn{
+                        padding: 20px 75px;
+                        @include lg(padding, 10px 50px);
+                        @include xs(padding, 5px 20px);
+                    }
                 }
             }
         }
@@ -286,16 +289,234 @@ main{
             @include xs(bottom, 0px);
         }
     }
-    .our-products{
+    .our-products-content{
         @include wrapper-full();
         text-align: center;
         h3{
             color: $blue;
             font-size: 30px;
-            margin: 40px 0;
+            margin: 80px 0 40px 0;
         }
         p{
             font-size: 18px;
+            margin: 40px 0;
+            color: $gray;
         }
     }
+    .bg{
+        min-height: 90px;
+        background-color: $gray-light;
+        @include md(display, none);
+    }
+    
+    .our-products{
+        @include wrapper-full();
+        
+        .container{
+            @include row-flex();
+            
+            .product{
+                @include col();
+                @include size(3);
+                @include size-md(6);
+                @include size-sm(12);
+    
+                display: flex;
+                flex-wrap: wrap;
+                flex-direction: column;
+                align-items: center;
+                border-right: solid 2px $white;
+                margin-top: -90px;
+                @include md(margin-top, 50px);
+                justify-content: space-around;
+                &:last-child{
+                     border-right: 0;
+                }
+                .img{
+                    margin: 0 0 auto 0;
+                    img{
+                        /*transition: all 1s ease-out;
+                        &:hover{
+                           transform: scale(1.1); 
+                        }*/
+                    }
+                }
+                .title{
+                    font-size: 22px;
+                    color: $gray;
+                    margin: 10px 0;
+                    text-align: center;
+                    hr{
+                        border-width: 0px;
+                        border-bottom: 2px solid $blue;
+                        width: 50px;
+                    }
+                }
+                .description{
+                    font-size: 16px;
+                    color: $gray;
+                    margin: 10px 0 30px 0;
+                    p{
+                        text-align: center;
+                    }
+                }
+                .link{
+                    padding: 13px 0;
+                    .btn{
+                        padding: 13px 55px;
+                        /*@include lg(padding, 10px 50px);
+                        @include xs(padding, 5px 20px);*/
+                    }
+                }
+            }
+        }
+    }
+    .prodocts-by-categories{
+        @include wrapper-full();
+        background-color: $gray-light;
+        padding-top: 40px;
+        padding-bottom: 40px;
+        margin-top: 80px;
+        
+        h4{
+            /*margin: 80px 0 40px 0;*/
+            font-size: 30px;
+            color: $blue;
+            text-align: center;
+        }
+        p{
+            font-size: 18px;
+            color: $gray;
+            text-align: center;
+            margin: 40px 0;
+        }
+        
+        .categories{
+            @include row-flex();
+            
+            .category{
+                @include col();
+                @include size(4);
+                @include size-md(6);
+                @include size-xs(12);
+                position: relative;
+                margin-bottom: 15px;
+                
+                img{
+                    /*width: 430px;
+                    height: 225px;*/
+                    vertical-align:bottom;
+                }
+                
+                .wrap{
+                    background: rgba(0, 0, 0, .6);
+                    position: absolute;
+                    top: 0;
+                    width: 100%;
+                    height: 100%;
+                    
+                    .title{
+                        width: calc(100% - 30px);
+                        height: calc(100% - 30px);
+                        margin: 15px;
+                        border: solid 2px $gray;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        position: absolute;
+                        left: -1px;
+                        top: -1px;
+                        align-items: center;
+                        
+                        a{
+                            margin: 0;
+                            font-size: 28px;
+                            color: $white;
+                            text-decoration: none;
+                            text-align: center;
+                            
+                            &:hover{
+                                text-decoration: underline;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .programs-brand{
+        @include wrapper-full();
+        padding-bottom: 40px;
+        margin-top: 80px;
+        border-bottom: solid 2px #f9f9f9; 
+        h4{
+            font-size: 30px;
+            color: $blue;
+            text-align: center;
+        }
+        p{
+            font-size: 18px;
+            color: $gray;
+            text-align: center;
+            margin: 40px 0;
+        }
+        .brands{
+            @include row-flex();
+            align-items: center;
+            
+            .program{
+                @include col();
+                @include size(2);
+                @include size-md(3);
+                @include size-xs(6);
+                margin-bottom: 30px;
+            }
+        }
+    }
+    .about{
+        padding-bottom: 40px;
+        margin-top: 80px;
+        
+        h4{
+            font-size: 30px;
+            color: $blue;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .content{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+
+            .text{
+                font-size: 16px;
+                color: $gray;
+                margin: 0 40px;
+                @include xs(margin,  0 15px);
+                flex-basis: 40%;
+                flex-grow: 1;
+                
+                p{
+                    margin-bottom: 15px;
+                    line-height: 24px;
+                    text-indent: 30px;
+                    text-align: justify;
+                }
+            }
+            
+            .img{
+                text-align: right;
+                flex-grow: 1;
+                @include xs(display, none);
+                /*transition: all 1s ease-out;
+                &:hover{
+                   transform: scale(1.1); 
+                }*/
+            }
+        }
+    }
+}
+
+footer{
+    min-height: 200px;
 }
