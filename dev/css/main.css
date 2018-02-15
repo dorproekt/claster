@@ -122,6 +122,15 @@ body {
   font-size: 14px;
 }
 
+.slick-slide {
+  cursor: move;
+}
+
+.slick-slide:focus,
+.slick-slide a {
+  outline: none;
+}
+
 .btn {
   color: #fff;
   font-size: 20px;
@@ -339,11 +348,6 @@ main #slider .slide .content div {
 
 main #slider .slide .content div .btn {
   padding: 20px 75px;
-}
-
-main #slider .slick-slide:focus,
-main #slider .slick-slide a {
-  outline: none;
 }
 
 main #slider img.control.slick-arrow {
@@ -711,8 +715,231 @@ main .about .content .img {
                 }*/
 }
 
+main .advantages {
+  padding-left: 40px;
+  padding-right: 40px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: baseline;
+  -webkit-align-items: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+}
+
+main .advantages .advantag {
+  -webkit-flex-basis: 20%;
+  -ms-flex-preferred-size: 20%;
+  flex-basis: 20%;
+  text-align: center;
+}
+
+main .advantages .advantag p {
+  font-size: 18px;
+  color: #747474;
+  margin: 15px 0;
+}
+
+main .our-clients {
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-bottom: 40px;
+  margin-top: 80px;
+  -webkit-box-shadow: inset 0 3px 20px -10px rgba(0, 0, 0, 0.5);
+  box-shadow: inset 0 3px 20px -10px rgba(0, 0, 0, 0.5);
+}
+
+main .our-clients h4 {
+  padding: 80px 0 40px 0;
+  font-size: 30px;
+  color: #00a1e1;
+  text-align: center;
+}
+
+main .our-clients .clients .client {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  height: 130px;
+  padding: 30px 50px;
+  margin: 20px;
+  -webkit-box-shadow: 0 0 10px 5px #dddddd;
+  box-shadow: 0 0 10px 5px #dddddd;
+}
+
 footer {
-  min-height: 200px;
+  color: #fff;
+  background-color: #000f26;
+}
+
+footer a {
+  color: #fff;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+footer li {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-size: 18px;
+  margin: 20px 0;
+}
+
+footer h5 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 40px;
+}
+
+footer .top-footer {
+  padding: 40px 0;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+footer .top-footer .wrapper {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-left: -15px;
+  margin-right: -15px;
+}
+
+footer .top-footer .wrapper div {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  margin-left: 15px;
+  margin-right: 15px;
+  width: -webkit-calc(25% - 30px);
+  width: calc(25% - 30px);
+}
+
+footer .top-footer .wrapper .contacts img {
+  margin-right: 10px;
+}
+
+footer .top-footer .wrapper .newsletter {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: end;
+  -webkit-align-items: flex-end;
+  -ms-flex-align: end;
+  align-items: flex-end;
+  text-align: right;
+}
+
+footer .top-footer .wrapper .newsletter p {
+  margin-bottom: 30px;
+}
+
+footer .top-footer .wrapper .newsletter form {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+footer .top-footer .wrapper .newsletter form input {
+  padding: 8px 15px;
+  -webkit-border-radius: 5px 0 0 5px;
+  border-radius: 5px 0 0 5px;
+  border: none;
+}
+
+footer .top-footer .wrapper .newsletter form .button {
+  padding: 8px 20px;
+  background: url("../img/arrow-right.png") #00a1e1;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+  -webkit-border-radius: 0 5px 5px 0;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+}
+
+footer .bottom-footer {
+  background-color: #000a19;
+  padding: 10px 0;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+footer .bottom-footer .wrapper {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+footer .bottom-footer .wrapper .social-networks {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+footer .bottom-footer .wrapper .social-networks a {
+  margin-left: 10px;
 }
 
 @media screen and (max-width: 1200px) {
@@ -738,6 +965,10 @@ footer {
 
   main #slider .slide .content div .btn {
     padding: 10px 50px;
+  }
+
+  main .our-clients .clients .client {
+    height: 60px;
   }
 }
 
@@ -854,6 +1085,25 @@ footer {
     width: -webkit-calc(25% - 30px);
     width: calc(25% - 30px);
   }
+
+  main .advantages .advantag {
+    -webkit-flex-basis: 33%;
+    -ms-flex-preferred-size: 33%;
+    flex-basis: 33%;
+  }
+
+  footer .top-footer .wrapper div {
+    width: -webkit-calc(50% - 30px);
+    width: calc(50% - 30px);
+  }
+
+  footer .top-footer .wrapper .shops {
+    display: none;
+  }
+
+  footer .top-footer .wrapper .for-clients {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -888,6 +1138,26 @@ footer {
   }
 
   main .programs-brand {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  main .advantages {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  main .our-clients {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  footer .top-footer {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  footer .bottom-footer {
     padding-left: 15px;
     padding-right: 15px;
   }
@@ -973,6 +1243,25 @@ footer {
   }
 
   main .about .content .img {
+    display: none;
+  }
+
+  main .advantages .advantag {
+    -webkit-flex-basis: 100%;
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+  }
+
+  footer .top-footer .wrapper div {
+    width: -webkit-calc(100% - 30px);
+    width: calc(100% - 30px);
+  }
+
+  footer .top-footer .wrapper .newsletter {
+    display: none;
+  }
+
+  footer .bottom-footer .wrapper .social-networks p {
     display: none;
   }
 }
