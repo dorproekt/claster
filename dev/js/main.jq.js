@@ -1,6 +1,6 @@
 $(document).ready(function(){
     
-    //menu
+    /* menu */
     let widthScreen = screen.width;
     
     $('nav li').hover(function(e){
@@ -16,12 +16,25 @@ $(document).ready(function(){
         }
     });
     
-    //slider
+    $('.show').click(function(){
+        $(this).css('display', 'none');
+        $(this).siblings('.hide').css('display', 'block');
+        $('.menu').css('display', 'block');
+    });
+    
+    $('.hide').click(function(){
+        $('.menu').attr('style', '')
+        $(this).css('display', 'none');
+        $(this).siblings('.show').css('display', 'block');
+    });
+    /* menu */
+    
+    //main slider
     $('#slider').slick({
         dots: true,
-        autoplay: false,
-        autoplaySpeed: 5000,
-        speed: 1000,
+        autoplay: true,
+        autoplaySpeed: 4000,
+        speed: 1500,
         prevArrow: '<img class="control prev" src="img/prev.png" alt=""/>',
         nextArrow: '<img class="control next" src="img/next.png" alt=""/>',
     });
@@ -60,32 +73,16 @@ $(document).ready(function(){
             
         ]
     });
+    
+    //zoom img
+    $('.category .title').hover(function(e){
+        console.log($(this).parent().siblings('img').css({
+            'transform': 'scale(1.1)'
+        }));
+    }, function(e){
+        $(this).parent().siblings('img').css({
+            'transform': 'scale(1)'
+        })
+    });
 });   
-    /*
-    
-                {
-              breakpoint: 1024,
-              settings: {
-                slidesToShow: 3,
-                slidesToScroll: 3,
-                infinite: true,
-                dots: true
-              }
-            },
-            {
-              breakpoint: 600,
-              settings: {
-                slidesToShow: 2,
-                slidesToScroll: 2
-              }
-            },
-            {
-              breakpoint: 480,
-              settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1
-              }
-            }
-            });
-    
-    */
+   
