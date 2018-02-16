@@ -61,7 +61,8 @@ gulp.task('webserver', function() {
     .pipe(server({
       livereload: true,
 	  port: 8888,
-      open: true
+      open: true,
+      defaultFile: 'contacts.html'
     }));
 });
 

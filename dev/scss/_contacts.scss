@@ -1,0 +1,99 @@
+main{
+    .breadcrumb{
+        @include wrapper-full();
+        display: flex;
+        flex-wrap: wrap;
+        box-shadow: inset 0 3px 20px -10px rgba(0, 0, 0, 0.5);
+        
+        li{
+            img{
+                margin-right: 8px;
+            }
+            margin: 40px 15px 40px 0;
+            a{
+                color: $blue;
+                text-decoration: none;
+
+                &:hover{
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+    .title-page{
+        background: url(../img/lines.png) $black;
+        background-repeat: no-repeat;
+        background-position: right;
+        color: $white;
+        padding: 20px 0;
+        
+        h1{
+            @include wrapper-full();
+            font-size: 24px;
+        }
+    }
+    .wrapper{
+        @include wrapper-full();
+        
+        .contacts{
+            @include row-flex();
+            
+            div{
+                @include col();
+            }
+            
+            .left-bar{
+                @include size(3);
+                .call-us{
+                    display: flex;
+                    flex-wrap: wrap;
+                    align-items: center;
+                    
+                    img{
+                        margin-right: 5px;
+                    }
+                    
+                    h2{
+                        color: $gray;
+                        font-weight: 600;
+                        font-size: 24px;
+                    }
+                }
+
+            }
+            .right-bar{
+                @include size(9);
+                
+                .location{
+                    display: flex;
+                    flex-wrap: wrap;
+                    align-items: center;
+                    
+                    img{
+                        margin-right: 5px;
+                    }
+                    
+                    h2{
+                        color: $gray;
+                        font-weight: 600;
+                        font-size: 24px;
+                    }
+                }
+                
+                .map{
+                    address{
+                        font-size: 22px;
+                        color: $gray;
+                    }
+                }
+                
+                .feedback{
+                    label{
+                        display: block;
+                    }
+                }
+
+            }
+        }
+    }
+}
