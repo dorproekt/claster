@@ -37,17 +37,23 @@ main{
         
         .contacts{
             @include row-flex();
+            justify-content: center;
+            padding: 40px 0 0 0; 
             
-            div{
+            div.elem{
                 @include col();
             }
             
             .left-bar{
                 @include size(3);
+                @include size-md(4);
+                @include size-sm(12);
+
                 .call-us{
                     display: flex;
                     flex-wrap: wrap;
                     align-items: center;
+                    padding: 0 0 40px 0;
                     
                     img{
                         margin-right: 5px;
@@ -59,15 +65,51 @@ main{
                         font-size: 24px;
                     }
                 }
+                
+                h3{
+                    font-size: 20px;
+                    color: $blue;
+                    padding: 0 0 20px 0;
+                }
+                
+                li{
+                    font-size: 20px;
+                    color: $gray;
+                    padding: 0 0 15px 0;
+                }
+                
+                .write-us, .schedule{
+                    display: flex;
+                    flex-wrap: wrap;
+                    align-items: center;
+                    color: $gray;
+                    padding: 40px 0 0px 0;
+                    
+                    img{
+                        margin-right: 5px;
+                    }
+                    
+                    h2{
+                        font-size: 24px;
+                        font-weight: 600;
+                    }
+                    ul{
+                        padding: 20px 0 0 0;
+                        width: 100%;
+                    }
+                }
 
             }
             .right-bar{
                 @include size(9);
+                @include size-md(8);
+                @include size-sm(12);
                 
                 .location{
                     display: flex;
                     flex-wrap: wrap;
                     align-items: center;
+                    padding: 0 0 40px 0;
                     
                     img{
                         margin-right: 5px;
@@ -84,15 +126,86 @@ main{
                     address{
                         font-size: 22px;
                         color: $gray;
-                    }
-                }
-                
-                .feedback{
-                    label{
-                        display: block;
+                        padding: 0 0 40px 0;
                     }
                 }
 
+            }
+            .feedback{
+                @include size(7);
+                @include size-sm(10);
+                @include size-xs(12);
+                p{
+                    font-size: 24px;
+                    color: $gray;
+                    text-align: center;
+                    font-weight: 600;
+                    padding: 40px 0;
+                }
+                
+                form{
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: space-between;
+                    margin-bottom: 40px;
+                    
+                    label{
+                        display: block;
+                        font-size: 16px;
+                        color: $gray;
+                        font-size: bold;
+                        margin-bottom: 15px;
+                    }
+                    
+                    .form-group{
+                        width: 40%;
+                        
+                        input{
+                            width: 100%;
+                            box-sizing: border-box;
+                            background-color: $gray-light;
+                            border: none;
+                            border-radius: 5px;
+                            padding: 8px 15px;
+                            box-shadow: inset 0 3px 15px -10px rgba(0, 0, 0, 0.5);
+                            &:focus{
+                                outline: none;
+                                box-shadow: 0 0 4px rgba(0, 161, 225, 0.7);
+                            }
+                            &:active{
+                                outline: none;
+                            }
+                        }
+                    }
+                    
+                    textarea{
+                        width: 100%;
+                        background-color: $gray-light; 
+                        margin: 40px 0;
+                        border: none;
+                        border-radius: 5px;
+                        padding: 8px 15px;
+                        box-shadow: inset 0 3px 15px -10px rgba(0, 0, 0, 0.5);
+                        &:focus{
+                            outline: none;
+                            box-shadow: 0 0 4px rgba(0, 161, 225, 0.7);
+                        }
+                        &:active{
+                            outline: none;
+                        }
+                    }
+                    
+                    div.submit{
+                        display: flex;
+                        width: 100%;
+                        justify-content: center;
+                        
+                        .btn{
+                            border: none;
+                            padding: 15px 40px;
+                        }
+                    }
+                }
             }
         }
     }

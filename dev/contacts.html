@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width">
     <meta name="description" content="Claster">
     <meta charset="utf-8">
-    <link rel="stylesheet" href="libs/slick/slick.css">
-    <link rel="stylesheet" href="libs/slick/slick-theme.css">
+    <!-- build:css css/main.min.css -->
     <link rel="stylesheet" href="css/main.css">
+    <!-- endbuild -->
 </head>
 <body>
     <header>
@@ -98,43 +98,46 @@
         </div>
         <div class="wrapper">
             <div class="contacts">
-                <div class="left-bar">
+                <div class="left-bar elem">
                     <div class="call-us">
                         <img src="img/phone-blue.png" alt="phone-blue">
                         <h2>Звоните нам</h2>
                     </div>
-                    <div class="sales-dep">
-                        <h3>Отдел продаж</h3>
-                        <ul>
-                            <li>+38 (097) 609 74 04</li>
-                            <li>+38 (097) 609 74 04</li>
-                        </ul>
+                    <div class="wrap-phones">
+                        <div class="sales-dep">
+                            <h3>Отдел продаж:</h3>
+                            <ul>
+                                <li>+38 (097) 609 74 04</li>
+                                <li>+38 (097) 609 74 04</li>
+                            </ul>
+                        </div>
+                        <div class="service-dep">
+                            <h3>Отдел сервиса:</h3>
+                            <ul>
+                                <li>+38 (097) 609 74 04</li>
+                                <li>+38 (097) 609 74 04</li>
+                            </ul>
+                        </div>
                     </div>
-                    <div class="service-dep">
-                        <h3>Отдел продаж</h3>
-                        <ul>
-                            <li>+38 (097) 609 74 04</li>
-                            <li>+38 (097) 609 74 04</li>
-                        </ul>
+                    <div class="wrap-info">
+                        <div class="write-us">
+                            <img src="img/mail-blue-icon.png" alt="mail-blue">
+                            <h2>Пишите нам</h2>
+                            <ul>
+                                <li>info-info@mail.ua</li>
+                            </ul>
+                        </div>
+                        <div class="schedule">
+                            <img src="img/clock-icon.png" alt="mail-blue">
+                            <h2>График работы</h2>
+                            <ul>
+                                <li>Пн-Пт 9:00-18:00</li>
+                                <li>Сб-Вс 10:00-15:00</li>
+                            </ul>
+                        </div>
                     </div>
-                    <div class="write-us">
-                        <img src="img/mail-blue-icon.png" alt="mail-blue">
-                        <h2>Пишите нам</h2>
-                        <ul>
-                            <li>info@mail.ua</li>
-                        </ul>
-                    </div>
-                    <div class="schedule">
-                        <img src="img/clock-icon.png" alt="mail-blue">
-                        <h2>График работы</h2>
-                        <ul>
-                            <li>Пн-Пт 9:00-18:00</li>
-                            <li>Сб-Вс 10:00-15:00</li>
-                        </ul>
-                    </div>
-                    
                 </div>
-                <div class="right-bar">
+                <div class="right-bar elem">
                     <div class="location">
                         <img src="img/location.png" alt="location">
                         <h2>Наш адрес</h2>
@@ -143,19 +146,24 @@
                         <address>02094, г. Киев, ул. Магнитогорская, 1Б</address>
                         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1270.1651237281044!2d30.64040165820814!3d50.453574702640935!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTDCsDI3JzEyLjkiTiAzMMKwMzgnMjkuNCJF!5e0!3m2!1sru!2sua!4v1518791032973" width="100%" height="550" frameborder="0" style="border:0" allowfullscreen></iframe>
                     </div>
-                    <div class="feedback">
-                        <p>Есть вопросы? Напишите нам письмо!</p>
-                        <form>
+                </div>
+                <div class="feedback elem">
+                    <p>Есть вопросы? Напишите нам письмо!</p>
+                    <form>
+                        <div class="form-group">
                             <label for="nameInput">Имя</label>
-                            <input type="text" id="nameInput" placeholder="Имя">
-                            
+                            <input type="text" id="nameInput">
+                        </div>
+
+                        <div class="form-group">
                             <label for="emailInput">Email</label>
-                            <input type="text" id="emailInput" placeholder="Email">
-                            
-                            <label for="messageTextarea">Сообщение</label>
-                            <textarea name="messageTextarea" id="messageTextarea" cols="30" rows="10"></textarea>
-                        </form>
-                    </div>
+                            <input type="text" id="emailInput">
+                        </div>
+                        <textarea name="messageTextarea" id="messageTextarea" cols="30" rows="10"></textarea>
+                        <div class="submit">
+                            <input type="submit" class="btn" value="Отправить">
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
@@ -222,8 +230,12 @@
             </div>
         </div>
     </footer>
+    <!-- build:js js/jquery.min.js -->
     <script src="libs/jquery/dist/jquery.min.js"></script>
-    <script src="libs/slick/slick.js"></script>
+    <!-- endbuild -->
+    <!-- build:js js/main.min.js -->
+     <script src="libs/slick/slick.js"></script>
     <script src="js/main.jq.js"></script>
+    <!-- endbuild -->
 </body>
 </html>

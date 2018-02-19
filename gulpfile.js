@@ -62,7 +62,7 @@ gulp.task('webserver', function() {
       livereload: true,
 	  port: 8888,
       open: true,
-      defaultFile: 'contacts.html'
+      defaultFile: 'index.html'
     }));
 });
 

@@ -1,6 +1,6 @@
 @import "smart-grid";
 @import "fonts";
-@import "../libs/Font-Awesome/web-fonts-with-css/css/fontawesome-all.css";
+/*@import "../libs/Font-Awesome/web-fonts-with-css/css/fontawesome-all.css";*/
 @include reset();
 
 $white: #fff;
@@ -32,12 +32,13 @@ body{
     text-decoration: none;
     background-color:$blue; 
     border-radius: 35px;
+    cursor: pointer;
     &:hover{
         text-decoration: underline;
     }
 }
 
 @import "header";
-/*@import "index";*/
+@import "index";
 @import "contacts";
 @import "footer";
