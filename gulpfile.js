@@ -62,7 +62,7 @@ gulp.task('webserver', function() {
       livereload: true,
 	  port: 8888,
       open: true,
-      defaultFile: 'index.html'
+      defaultFile: 'list-products.html'
     }));
 });
 

@@ -1,0 +1,12 @@
+.title-page{
+    background: url(../img/lines.png) $black;
+    background-repeat: no-repeat;
+    background-position: right;
+    color: $white;
+    padding: 20px 0;
+
+    h1{
+        @include wrapper-full();
+        font-size: 24px;
+    }
+}

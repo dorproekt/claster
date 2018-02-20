@@ -1,37 +1,6 @@
 main{
-    .breadcrumb{
-        @include wrapper-full();
-        display: flex;
-        flex-wrap: wrap;
-        box-shadow: inset 0 3px 20px -10px rgba(0, 0, 0, 0.5);
-        
-        li{
-            img{
-                margin-right: 8px;
-            }
-            margin: 40px 15px 40px 0;
-            a{
-                color: $blue;
-                text-decoration: none;
-
-                &:hover{
-                    text-decoration: underline;
-                }
-            }
-        }
-    }
-    .title-page{
-        background: url(../img/lines.png) $black;
-        background-repeat: no-repeat;
-        background-position: right;
-        color: $white;
-        padding: 20px 0;
-        
-        h1{
-            @include wrapper-full();
-            font-size: 24px;
-        }
-    }
+    @import "breadcrumb";
+    @import "title-page";
     .wrapper{
         @include wrapper-full();
         

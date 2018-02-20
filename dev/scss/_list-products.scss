@@ -1,0 +1,157 @@
+main{
+    @import "breadcrumb";
+    @import "title-page";
+    
+    .wrapper{
+        @include wrapper-full();
+        
+        .list-products{
+            @include row-flex();
+            
+            .elem{
+                @include col();
+            }
+            
+            .left-bar{
+                @include size(3);
+            }
+            
+            .right-bar{
+                @include size(9);
+                
+                .products{
+                    @include row-flex();
+                    
+                    @import "product";
+                    .product{
+                        @include col();
+                        @include size(4);
+                    }
+                }
+                .products-inline{
+                    display: none;
+                    .product-inline{
+                        display: flex;
+                        border: 1px solid #eee;
+                        border-radius: 3px;
+                        box-shadow: 0 0 10px 3px rgba(238, 238, 238, .7);
+                        margin-bottom: 20px;
+                        
+                        .img{
+                            padding: 20px 60px;
+                            
+                            img{
+                                transition: all .7s ease-out;
+                                &:hover{
+                                   transform: scale(1.1); 
+                                }
+                            }
+                        }
+                        
+                        .content{
+                            .title{
+                                display: flex;
+                                justify-content: space-between;
+                                padding: 20px 20px 20px 0;
+                                
+                                a{
+                                    font-size: 20px;
+                                    color: $black;
+                                    text-decoration: none;
+                                    
+                                    &:hover{
+                                        text-decoration: underline;
+                                    }
+                                }
+                                
+                                .tools{
+                                    span{
+                                        margin-right: 10px; 
+                                    }
+                                }
+                            }
+                            
+                            .price{
+                                margin: 5px 0;
+                                span{
+                                    background-color: $blue;
+                                    color: $white;
+                                    padding: 10px 30px;
+
+                                    strong{
+                                        font-weight: 600;
+                                        font-size: 16px;
+                                    }
+                                }
+                            }
+                            .description{
+                                font-size: 18px;
+                                color: $gray;
+                                padding: 20px 20px 20px 0;
+                            }
+                            
+                            .buy{
+                                padding: 0 20px 20px 0;
+                                text-align: right;
+                                .btn{
+                                    padding: 15px 60px; 
+                                }
+                            }
+                        }
+                        
+                    }
+                }
+            }
+        }
+        
+        .text{
+            
+            h2{
+                font-size: 24px;
+                color: $gray;
+                padding: 20px 0;
+            }
+            
+            p{
+                font-size: 16px;
+                color: $gray;
+                padding-bottom: 20px;
+                text-align: justify;
+            }
+        }
+        .interesting-goods{
+            margin-top: 20px;
+            border-top: 2px solid $gray-light;
+            h3{
+                font-size: 24px;
+                color: $gray;
+                padding: 20px 0;
+            }
+            
+            .interesting-goods-wrap{
+                margin: 0 -20px;
+            }
+            
+            .slick-slide img {
+                display: inherit;
+            }
+            
+            @import "product";
+            
+            .product{
+                margin: 0 20px 40px 20px;
+            }
+            
+            .control{
+                position: absolute;
+                top: -50px;
+                right: 15px;
+                cursor: pointer;
+            }
+            
+            .left{
+                right: 60px;
+            }
+        }
+    }
+}

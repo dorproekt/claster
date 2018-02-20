@@ -33,12 +33,14 @@ body{
     background-color:$blue; 
     border-radius: 35px;
     cursor: pointer;
+    border: none;
     &:hover{
         text-decoration: underline;
     }
 }
 
 @import "header";
-@import "index";
-@import "contacts";
+/*@import "index";
+@import "contacts";*/
+@import "list-products";
 @import "footer";
