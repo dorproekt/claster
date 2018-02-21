@@ -7,6 +7,7 @@ main{
         
         .list-products{
             @include row-flex();
+            margin-top: 40px;
             
             .elem{
                 @include col();
@@ -14,11 +15,136 @@ main{
             
             .left-bar{
                 @include size(3);
+                
+                .filters{
+                    border: solid 1px #eee;
+                    
+                    h3{
+                        font-size: 20px;
+                        text-align: center;
+                        color: $gray;
+                        padding: 40px 0;
+                    }
+                    
+                    .params{
+                        padding: 20px;
+                        border-top: solid 1px #eee;
+                        
+                        .title-params{
+                            display: flex;
+                            flex-wrap: wrap;
+                            justify-content: space-between;
+                            font-size: 16px;
+                            margin-bottom: 15px;
+                            
+                            h4{
+                                color: $blue;
+                            }
+                            
+                            i{
+                                color: #dcdcdc;
+                                padding: 5px 8px;
+                                border: solid 1px #dcdcdc;
+                                border-radius: 50%;
+                                cursor: pointer;
+                            }
+                        }
+                        
+                        .value-params{
+                            .checkbox{
+                                margin-bottom: 15px;
+                                
+                                span{
+                                    color: $gray;
+                                }
+                            }
+                        }
+                    }
+                }
             }
             
             .right-bar{
                 @include size(9);
                 
+                .filters-active{
+                    margin-bottom: 40px;
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: space-between;
+                    
+                    .list-active-filters{
+                        display: flex;
+                        flex-wrap: wrap;
+                        
+                        li.filter-active{
+                            color: $gray;
+                            font-size: 16px;
+                            background-color: #f1f2f2;
+                            margin-right: 10px;
+                            padding: 10px 10px 10px 20px;
+                            border-radius: 30px;
+                            cursor: pointer;
+                            
+                            span{
+                               margin-right: 10px; 
+                            }
+                            i{
+                                color: #dcdcdc;
+                            }
+                        }
+                        li.reset{
+                            font-size: 16px;
+                            color: $gray;
+                            padding: 10px 20px;
+                            border-radius: 30px;
+                            cursor: pointer;
+                            border: solid 1px #fac0b5;
+                        }
+                        
+                    }
+                    
+                    .sorts{
+                        display: flex;
+                        flex-wrap: wrap;
+                        align-items: center;
+                        color: $gray;
+                        
+                        .sort{
+                            margin-right: 20px;
+                            display: flex;
+                            flex-wrap: wrap;
+                            align-items: center;
+                            
+                            span{
+                                margin-right: 10px;    
+                            }
+                            
+                            .select{
+                                min-width: 205px;
+                            }
+                            
+                        }
+                        
+                        .view{
+                            display: flex;
+                            flex-wrap: wrap;
+                            align-items: center;
+                            font-size: 20px;
+                            
+                            li{
+                                margin-left: 10px;
+                                padding: 7px;
+                                border-radius: 5px;
+                                background-color: #f1f2f2;
+                                cursor: pointer;
+                            }
+                            
+                            li.active{
+                                color: $blue;
+                            }
+                        }
+                    }
+                }
                 .products{
                     @include row-flex();
                     
