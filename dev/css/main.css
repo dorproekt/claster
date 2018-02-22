@@ -139,10 +139,16 @@ body {
   border-radius: 35px;
   cursor: pointer;
   border: none;
+  -webkit-transition: .5s;
+  -o-transition: .5s;
+  transition: .5s;
+  border: solid 2px #00a1e1;
 }
 
 .btn:hover {
-  text-decoration: underline;
+  /*text-decoration: underline;*/
+  background-color: #fff;
+  color: #00a1e1;
 }
 
 .select {
@@ -174,13 +180,12 @@ body {
   background-color: #fff;
   border: solid 1px #f1f2f2;
   border-top: none;
-  -webkit-border-radius: 5px;
-  border-radius: 5px;
+  -webkit-border-radius: 0 0 5px 5px;
+  border-radius: 0 0 5px 5px;
   width: 100%;
   left: -1px;
-  top: 0;
-  margin-top: 25px;
-  padding: 10px 0;
+  top: 100%;
+  padding: 0 0 10px 0;
   z-index: 1000;
 }
 
@@ -208,6 +213,14 @@ body {
 
 .checkbox i.active {
   color: #00a1e1;
+}
+
+input:focus {
+  outline: none;
+}
+
+input:active {
+  outline: none;
 }
 
 header .top-header {
@@ -468,6 +481,53 @@ main .wrapper .list-products .left-bar .filters .params {
   border-top: solid 1px #eee;
 }
 
+main .wrapper .list-products .left-bar .filters .params .ui-widget.ui-widget-content {
+  border: none;
+  background-color: #e9e9e9;
+  -webkit-box-shadow: inset 0 3px 15px -8px rgba(0, 0, 0, 0.5);
+  box-shadow: inset 0 3px 15px -8px rgba(0, 0, 0, 0.5);
+}
+
+main .wrapper .list-products .left-bar .filters .params .ui-widget-header {
+  background-color: #00a1e1;
+}
+
+main .wrapper .list-products .left-bar .filters .params .ui-state-active {
+  background-color: #00a1e1;
+  border: none;
+}
+
+main .wrapper .list-products .left-bar .filters .params .inputs {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  color: #747474;
+  margin-bottom: 20px;
+}
+
+main .wrapper .list-products .left-bar .filters .params .inputs input {
+  width: 30%;
+  margin-right: 10px;
+  /*border-radius: 3px;
+                                box-shadow: inset 0 3px 8px -8px rgba(0, 0, 0, 0.7);*/
+  border: solid 1px #f1f2f2;
+  -webkit-box-shadow: inset 0 3px 15px -10px rgba(0, 0, 0, 0.5);
+  box-shadow: inset 0 3px 15px -10px rgba(0, 0, 0, 0.5);
+  color: #747474;
+  text-align: center;
+  padding: 5px 0;
+}
+
+main .wrapper .list-products .left-bar .filters .params .inputs span {
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+}
+
 main .wrapper .list-products .left-bar .filters .params .title-params {
   display: -webkit-box;
   display: -webkit-flex;
@@ -533,6 +593,9 @@ main .wrapper .list-products .right-bar .filters-active .list-active-filters {
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  -webkit-flex-basis: 50%;
+  -ms-flex-preferred-size: 50%;
+  flex-basis: 50%;
 }
 
 main .wrapper .list-products .right-bar .filters-active .list-active-filters li.filter-active {
@@ -540,10 +603,14 @@ main .wrapper .list-products .right-bar .filters-active .list-active-filters li.
   font-size: 16px;
   background-color: #f1f2f2;
   margin-right: 10px;
+  margin-bottom: 10px;
   padding: 10px 10px 10px 20px;
   -webkit-border-radius: 30px;
   border-radius: 30px;
   cursor: pointer;
+  -webkit-transition: .5s;
+  -o-transition: .5s;
+  transition: .5s;
 }
 
 main .wrapper .list-products .right-bar .filters-active .list-active-filters li.filter-active span {
@@ -552,16 +619,39 @@ main .wrapper .list-products .right-bar .filters-active .list-active-filters li.
 
 main .wrapper .list-products .right-bar .filters-active .list-active-filters li.filter-active i {
   color: #dcdcdc;
+  -webkit-transition: .5s;
+  -o-transition: .5s;
+  transition: .5s;
+}
+
+main .wrapper .list-products .right-bar .filters-active .list-active-filters li.filter-active:hover {
+  color: #fff;
+  background-color: #000f26;
+}
+
+main .wrapper .list-products .right-bar .filters-active .list-active-filters li.filter-active:hover i {
+  color: #fff;
 }
 
 main .wrapper .list-products .right-bar .filters-active .list-active-filters li.reset {
+  /*display: none;*/
   font-size: 16px;
   color: #747474;
   padding: 10px 20px;
   -webkit-border-radius: 30px;
   border-radius: 30px;
+  margin-bottom: 10px;
   cursor: pointer;
   border: solid 1px #fac0b5;
+  -webkit-transition: .5s;
+  -o-transition: .5s;
+  transition: .5s;
+}
+
+main .wrapper .list-products .right-bar .filters-active .list-active-filters li.reset:hover {
+  background-color: #dc3545;
+  border: solid 1px #dc3545;
+  color: #fff;
 }
 
 main .wrapper .list-products .right-bar .filters-active .sorts {
@@ -576,6 +666,13 @@ main .wrapper .list-products .right-bar .filters-active .sorts {
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
+  -webkit-flex-basis: 50%;
+  -ms-flex-preferred-size: 50%;
+  flex-basis: 50%;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
   color: #747474;
 }
 
@@ -599,7 +696,7 @@ main .wrapper .list-products .right-bar .filters-active .sorts .sort span {
 }
 
 main .wrapper .list-products .right-bar .filters-active .sorts .sort .select {
-  min-width: 205px;
+  min-width: 180px;
 }
 
 main .wrapper .list-products .right-bar .filters-active .sorts .view {
@@ -1199,6 +1296,10 @@ footer .bottom-footer .wrapper .social-networks a {
     margin-left: 5px;
   }
 
+  main .wrapper .list-products .right-bar .filters-active .sorts .sort span.title {
+    display: none;
+  }
+
   footer .top-footer .wrapper div {
     width: -webkit-calc(25% - 30px);
     width: calc(25% - 30px);
@@ -1339,6 +1440,30 @@ footer .bottom-footer .wrapper .social-networks a {
 
   header nav .menu li.item .submenu li {
     margin-top: 10px;
+  }
+
+  main .wrapper .list-products .right-bar .filters-active .list-active-filters {
+    -webkit-flex-basis: 100%;
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+  }
+
+  main .wrapper .list-products .right-bar .filters-active .sorts {
+    -webkit-flex-basis: 100%;
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+  }
+
+  main .wrapper .list-products .right-bar .filters-active .sorts {
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+  }
+
+  main .wrapper .list-products .right-bar .products .product {
+    width: -webkit-calc(50% - 30px);
+    width: calc(50% - 30px);
   }
 
   footer .top-footer .wrapper div {

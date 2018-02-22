@@ -10,6 +10,31 @@ $(document).ready(function(){
         slidesToScroll: 4,
         prevArrow: '<img class="control left" src="img/black-arrow-left.png" alt="black-arrow-right"/>',
         nextArrow: '<img class="control right" src="img/black-arrow-right.png" alt="black-arrow-left"/>',
+        responsive: [
+            {
+                breakpoint: 992,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 3,
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
+                }
+            },
+            {
+                breakpoint: 576,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                }
+            },
+            
+        ]
+        
     });
     
     //view products-inline or products
@@ -31,24 +56,33 @@ $(document).ready(function(){
     });
     
     //remove filter-active
-    $('.filter-active').click(function(e){
-        //console.log('stop');
+    $('.list-active-filters').on('click', function(e){
         
-        if($('.filter-active').length === 1){
-            $('.reset').remove();
+        if(e.target.tagName === 'I'){
+            
+            if($('.filter-active').length === 1){
+                $('.reset').css('display', 'none');
+            }
+            
+            var id = $(e.target).parents('.filter-active').attr('id') + '_filter';
+
+            $('#' + id).children('i').removeClass('active');
+            $(e.target).parents('.filter-active').remove();
+
         }
 
-        $(this).remove();
     });
     
     //reset filter-active
     $('.reset').click(function(){
-        $('.list-active-filters li').remove();
+        $('.list-active-filters li.filter-active').remove();
+        $('li.reset').css('display', 'none');
+        $('.value-params i').removeClass('active');
     });
     
     //select
     $('.select').click(function(){
-        $('.options').toggle(50);
+        $('.options').slideToggle(100);
     });
     
     $('.option').click(function(){
@@ -61,9 +95,19 @@ $(document).ready(function(){
     $('.title-params i').click(function(){
         //$(this).css('transform', 'rotate(180deg)');
         var i = $(this);
-        $(this).parents('.title-params').siblings('.value-params').toggle(500, function(){
-            i.css('transform', 'rotate(180deg)');
-        });
+        
+        if(i.hasClass('down')){
+            i.css('transform', 'rotate(0deg)');
+            i.removeClass('down');
+        }else{
+            i.addClass('down');
+            i.css({
+                transform: 'rotate(180deg)',
+                transition: 'transform .5s'
+            });
+        }
+        
+        $(this).parents('.title-params').siblings('.value-params').slideToggle(500);
     });
     
     //checkbox
@@ -75,12 +119,19 @@ $(document).ready(function(){
         }
     });*/
     
+    //add filter params
     $('.checkbox i').click(function(){
         var filterParam = $(this).siblings('span').html();
         var idFilterParam = filterParam.split(' ').join('_');
+        $(this).parents('.checkbox').attr('id', idFilterParam + '_filter');
         
         if(!$(this).hasClass('active')){
             $(this).addClass('active');
+            
+            if($('.filter-active').length === 0){
+                $('.reset').css('display', 'block');
+            }
+            
             $('.list-active-filters').prepend('<li class="filter-active test" id="' + idFilterParam + '"><span>' + filterParam + '</span><i class="far fa-times-circle"></i></li>');
         }else{
             $(this).removeClass('active');
@@ -88,8 +139,30 @@ $(document).ready(function(){
         }
     });
     
-    $('#32_Гб').click(function(){
-        console.log(2222);
+    /* slider price */
+    $( "#prices" ).slider({
+        range: true,
+        min: 0,
+        max: 5000,
+        values: [ 0, 2500 ],
+        slide: function( event, ui ) {
+            $( "#min" ).val(ui.values[ 0 ]);
+            $( "#max" ).val(ui.values[ 1 ]);
+        }
     });
+    
+    $( "#min" ).val($( "#prices" ).slider( "values", 0 ));
+    $( "#max" ).val($( "#prices" ).slider( "values", 1 ));
+    
+    $('#min, #max').keydown(function(e){
+
+        if(e.key === 'Enter'){
+            var min = $('#min').val();
+            var max = $('#max').val();
+
+            $( "#prices" ).slider("option", "values",  [min, max]);
+        }
+    });
+    /* slider price */
 
 });
