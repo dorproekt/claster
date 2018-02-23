@@ -28,6 +28,7 @@ $(document).ready(function(){
             {
                 breakpoint: 576,
                 settings: {
+                    arrows: false,
                     slidesToShow: 1,
                     slidesToScroll: 1,
                 }
@@ -164,5 +165,23 @@ $(document).ready(function(){
         }
     });
     /* slider price */
+    
+    $('.selection-parameters').click(function(){
+        $('.left-bar').css('display', 'block');
+        $('body').append('<div id="bg"></div>');
+        $('#bg').css({
+            position: 'fixed',
+            background: 'rgba(204, 204, 204, 0.7)',
+            width: '100%',
+            height: '100%',
+            top: 0
+        });
+        $('.filters').show(500);
+    });
+    
+    $('.tuck-up, .close i').click(function(){
+        $('.filters').hide(500);
+        $('#bg').remove();
+    });
 
 });

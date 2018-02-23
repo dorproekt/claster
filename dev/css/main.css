@@ -565,6 +565,30 @@ main .wrapper .list-products .left-bar .filters .params .value-params .checkbox 
   color: #747474;
 }
 
+main .wrapper .list-products .left-bar .filters .close {
+  display: none;
+  color: #747474;
+  position: absolute;
+  top: 0;
+  margin: 10px;
+}
+
+main .wrapper .list-products .left-bar .filters .close i {
+  cursor: pointer;
+  font-size: 18px;
+}
+
+main .wrapper .list-products .left-bar .filters .tuck-up {
+  text-align: center;
+  display: none;
+  margin-bottom: 30px;
+}
+
+main .wrapper .list-products .left-bar .filters .tuck-up .btn {
+  padding: 5px 15px;
+  text-transform: none;
+}
+
 main .wrapper .list-products .right-bar {
   width: -webkit-calc(75% - 30px);
   width: calc(75% - 30px);
@@ -727,6 +751,17 @@ main .wrapper .list-products .right-bar .filters-active .sorts .view li.active {
   color: #00a1e1;
 }
 
+main .wrapper .list-products .right-bar .filters-active .sorts .selection-parameters {
+  display: none;
+  color: #fff;
+  background-color: #00a1e1;
+  font-size: 16px;
+  padding: 10px 20px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  text-transform: uppercase;
+}
+
 main .wrapper .list-products .right-bar .products {
   display: -webkit-box;
   display: -webkit-flex;
@@ -882,6 +917,7 @@ main .wrapper .list-products .right-bar .products-inline .product-inline .img {
 }
 
 main .wrapper .list-products .right-bar .products-inline .product-inline .img img {
+  width: 100%;
   -webkit-transition: all .7s ease-out;
   -o-transition: all .7s ease-out;
   transition: all .7s ease-out;
@@ -1442,12 +1478,61 @@ footer .bottom-footer .wrapper .social-networks a {
     margin-top: 10px;
   }
 
+  main .wrapper .list-products .left-bar {
+    display: none;
+  }
+
+  main .wrapper .list-products .left-bar .filters {
+    display: none;
+  }
+
+  main .wrapper .list-products .left-bar .filters {
+    position: absolute;
+  }
+
+  main .wrapper .list-products .left-bar .filters {
+    z-index: 3;
+  }
+
+  main .wrapper .list-products .left-bar .filters {
+    top: 5%;
+  }
+
+  main .wrapper .list-products .left-bar .filters {
+    right: 0;
+  }
+
+  main .wrapper .list-products .left-bar .filters {
+    background-color: #fff;
+  }
+
+  main .wrapper .list-products .left-bar .filters .close {
+    display: block;
+  }
+
+  main .wrapper .list-products .left-bar .filters .tuck-up {
+    display: block;
+  }
+
+  main .wrapper .list-products .right-bar {
+    width: -webkit-calc(100% - 30px);
+    width: calc(100% - 30px);
+  }
+
   main .wrapper .list-products .right-bar .filters-active .list-active-filters {
     -webkit-flex-basis: 100%;
     -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
   }
 
+  main .wrapper .list-products .right-bar .filters-active .list-active-filters li.filter-active {
+    margin-bottom: 40px;
+  }
+
+  main .wrapper .list-products .right-bar .filters-active .list-active-filters li.reset {
+    margin-bottom: 40px;
+  }
+
   main .wrapper .list-products .right-bar .filters-active .sorts {
     -webkit-flex-basis: 100%;
     -ms-flex-preferred-size: 100%;
@@ -1455,15 +1540,30 @@ footer .bottom-footer .wrapper .social-networks a {
   }
 
   main .wrapper .list-products .right-bar .filters-active .sorts {
-    -webkit-box-pack: start;
-    -webkit-justify-content: flex-start;
-    -ms-flex-pack: start;
-    justify-content: flex-start;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
   }
 
-  main .wrapper .list-products .right-bar .products .product {
-    width: -webkit-calc(50% - 30px);
-    width: calc(50% - 30px);
+  main .wrapper .list-products .right-bar .filters-active .sorts .view {
+    display: none;
+  }
+
+  main .wrapper .list-products .right-bar .filters-active .sorts .selection-parameters {
+    display: block;
+  }
+
+  main .wrapper .list-products .right-bar .products {
+    display: none;
+  }
+
+  main .wrapper .list-products .right-bar .products-inline {
+    display: block;
+  }
+
+  main .wrapper .list-products .right-bar .products-inline .product-inline .content .title .tools {
+    display: none;
   }
 
   footer .top-footer .wrapper div {
@@ -1510,6 +1610,50 @@ footer .bottom-footer .wrapper .social-networks a {
     padding-right: 15px;
   }
 
+  main .wrapper .list-products .right-bar .products-inline .product-inline {
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+
+  main .wrapper .list-products .right-bar .products-inline .product-inline {
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+
+  main .wrapper .list-products .right-bar .products-inline .product-inline .content .title {
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+
+  main .wrapper .list-products .right-bar .products-inline .product-inline .content .title {
+    padding: 10px;
+  }
+
+  main .wrapper .list-products .right-bar .products-inline .product-inline .content .title {
+    text-align: center;
+  }
+
+  main .wrapper .list-products .right-bar .products-inline .product-inline .content .price span {
+    padding: 5px 30px;
+  }
+
+  main .wrapper .list-products .right-bar .products-inline .product-inline .content .description {
+    font-size: 14px;
+  }
+
+  main .wrapper .list-products .right-bar .products-inline .product-inline .content .description {
+    padding: 10px;
+  }
+
+  main .wrapper .interesting-goods .interesting-goods-wrap {
+    margin: 0 -15px;
+  }
+
   footer .top-footer {
     padding-left: 15px;
     padding-right: 15px;
@@ -1540,6 +1684,18 @@ footer .bottom-footer .wrapper .social-networks a {
 
   header nav .navbar-toggler {
     width: 20px;
+  }
+
+  main .wrapper .list-products .right-bar .filters-active .sorts {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+
+  main .wrapper .list-products .right-bar .filters-active .sorts .sort {
+    margin: 0 0 10px 0;
   }
 
   footer .top-footer .wrapper div {

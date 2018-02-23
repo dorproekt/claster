@@ -15,9 +15,16 @@ main{
             
             .left-bar{
                 @include size(3);
+                @include md(display, none);
                 
                 .filters{
                     border: solid 1px #eee;
+                    @include md(display, none);
+                    @include md(position, absolute);
+                    @include md(z-index, 3);
+                    @include md(top, 5%);
+                    @include md(right, 0);
+                    @include md(background-color, $white);
                     
                     h3{
                         font-size: 20px;
@@ -97,11 +104,38 @@ main{
                             }
                         }
                     }
+                    
+                    .close{
+                        display: none;
+                        @include md(display, block);
+                        color: $gray;
+                        position: absolute;
+                        top: 0;
+                        margin: 10px;
+                        
+                        i{
+                            cursor: pointer;
+                            font-size: 18px;
+                        }
+                    }
+                    
+                    .tuck-up{
+                        text-align: center;
+                        display: none;
+                        @include md(display, block);
+                        margin-bottom: 30px;
+                        
+                        .btn{
+                            padding: 5px 15px; 
+                            text-transform: none;
+                        }
+                    }
                 }
             }
             
             .right-bar{
                 @include size(9);
+                @include size-md(12);
                 
                 .filters-active{
                     margin-bottom: 40px;
@@ -121,6 +155,7 @@ main{
                             background-color: #f1f2f2;
                             margin-right: 10px;
                             margin-bottom: 10px;
+                            @include md(margin-bottom, 40px);
                             padding: 10px 10px 10px 20px;
                             border-radius: 30px;
                             cursor: pointer;
@@ -150,6 +185,7 @@ main{
                             padding: 10px 20px;
                             border-radius: 30px;
                             margin-bottom: 10px;
+                            @include md(margin-bottom, 40px);
                             cursor: pointer;
                             border: solid 1px #fac0b5;
                             transition: .5s;
@@ -168,13 +204,15 @@ main{
                         flex-wrap: wrap;
                         align-items: center;
                         flex-basis: 50%;
+                        @include xs(flex-direction, column);
                         @include md(flex-basis, 100%);
                         justify-content: flex-end;
-                        @include md(justify-content, flex-start);
+                        @include md(justify-content, space-between);
                         color: $gray;
                         
                         .sort{
                             margin-right: 20px;
+                            @include xs(margin, 0 0 10px 0);
                             display: flex;
                             flex-wrap: wrap;
                             align-items: center;
@@ -194,6 +232,7 @@ main{
                         }
                         
                         .view{
+                            @include md(display, none);
                             display: flex;
                             flex-wrap: wrap;
                             align-items: center;
@@ -211,22 +250,38 @@ main{
                                 color: $blue;
                             }
                         }
+                        
+                        .selection-parameters{
+                            display: none;
+                            @include md(display, block);
+                            
+                            color: $white;
+                            background-color: $blue;
+                            font-size: 16px;
+                            padding: 10px 20px;
+                            border-radius: 5px;
+                            text-transform: uppercase;
+                        }
                     }
                 }
                 .products{
                     @include row-flex();
+                    @include md(display, none);
                     
                     @import "product";
                     .product{
                         @include col();
                         @include size(4);
-                        @include size-md(6);
+
                     }
                 }
                 .products-inline{
                     display: none;
+                    @include md(display, block);
                     .product-inline{
                         display: flex;
+                        @include sm(flex-wrap, wrap);
+                        @include sm(justify-content, center);
                         border: 1px solid #eee;
                         border-radius: 3px;
                         box-shadow: 0 0 10px 3px rgba(238, 238, 238, .7);
@@ -236,6 +291,7 @@ main{
                             padding: 20px 60px;
                             
                             img{
+                                width: 100%;
                                 transition: all .7s ease-out;
                                 &:hover{
                                    transform: scale(1.1); 
@@ -247,7 +303,10 @@ main{
                             .title{
                                 display: flex;
                                 justify-content: space-between;
+                                @include sm(justify-content, center);
                                 padding: 20px 20px 20px 0;
+                                @include sm(padding, 10px);
+                                @include sm(text-align, center);
                                 
                                 a{
                                     font-size: 20px;
@@ -260,6 +319,7 @@ main{
                                 }
                                 
                                 .tools{
+                                    @include md(display, none);
                                     span{
                                         margin-right: 10px; 
                                     }
@@ -272,6 +332,7 @@ main{
                                     background-color: $blue;
                                     color: $white;
                                     padding: 10px 30px;
+                                    @include sm(padding, 5px 30px);
 
                                     strong{
                                         font-weight: 600;
@@ -281,8 +342,10 @@ main{
                             }
                             .description{
                                 font-size: 18px;
+                                @include sm(font-size, 14px);
                                 color: $gray;
                                 padding: 20px 20px 20px 0;
+                                @include sm(padding, 10px);
                             }
                             
                             .buy{
@@ -325,6 +388,7 @@ main{
             
             .interesting-goods-wrap{
                 margin: 0 -20px;
+                @include sm(margin, 0 -15px);
             }
             
             .slick-slide img {
