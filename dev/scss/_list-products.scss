@@ -2,6 +2,43 @@ main{
     @import "breadcrumb";
     @import "title-page";
     
+    .title-page{
+        display: block;
+    }
+    
+    .three-dsmax{
+        background-image: url(../img/bg-3dsmax.png);
+        background-color: #000;
+        background-repeat: no-repeat;
+        background-position: left;
+        
+        .wrapper{
+            @include wrapper-full();
+            display: flex;
+            /*flex-wrap: wrap;*/
+            @include lg(flex-wrap, wrap);
+            justify-content: space-between;
+            padding-top: 50px;
+            padding-bottom: 50px;
+            @include lg(padding-top, 20px);
+            @include lg(padding-bottom, 20px);
+            @include sm(padding-bottom, 0);
+            @include sm(padding-bottom, 0);
+            
+            .img{
+                margin-right: 20px;
+            }
+            
+            .text{
+                p{
+                    color: $white;
+                    font-size: 18px;
+                }
+            }
+            
+        }
+    }
+    
     .wrapper{
         @include wrapper-full();
         
