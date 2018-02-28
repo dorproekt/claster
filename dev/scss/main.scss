@@ -9,6 +9,8 @@ $blue: #00a1e1;
 $blue2: #94e0fe;
 $gray: #747474;
 $gray-light: #f7f8f8;
+$green: #0abe00;
+$gl: #ede9e9;
 
 body{
     font-family: Roboto, Verdana;
@@ -40,6 +42,18 @@ body{
         /*text-decoration: underline;*/
         background-color: $white;
         color: $blue;
+    }
+}
+
+.btn.green{
+    font-size: 20px;
+    background-color: $green;
+    font-weight: 600;
+    border-color: $green;
+
+    &:hover{
+        color: $green;
+        background-color: $white;
     }
 }
 
@@ -105,8 +119,62 @@ input{
     }
 }
 
+.add-page{
+    color: $gray;
+    
+    p{
+        font-size: 16px;
+    }
+    
+    .container{
+        display: flex;
+        flex-wrap: wrap;
+        
+        div{
+            margin-right: 10px;
+            display: flex;
+            
+            span{
+                font-size: 18px;
+                padding: 8px;
+                cursor: pointer;
+                width: 25px;
+                text-align: center;
+            }
+        }
+        
+        .fb{
+            border: solid 1px #3b5998;
+            border-radius: 7px;
+            color: #3b5998;
+            .cnt{
+                border-left: solid 1px #3b5998;
+            }
+        }
+        .google{
+            border: solid 1px #dc4e41;
+            border-radius: 7px;
+            color: #dc4e41;
+            .cnt{
+                border-left: solid 1px #dc4e41;
+            }
+        }
+        
+        .star{
+            border: solid 1px $blue;
+            border-radius: 7px;
+            color: $blue;
+            .cnt{
+                border-left: solid 1px $blue;
+            }
+        }
+        
+    }
+}
+
 @import "header";
 /*@import "index";
-@import "contacts";*/
-@import "list-products";
+@import "contacts";
+@import "list-products";*/
+@import "product-page";
 @import "footer";

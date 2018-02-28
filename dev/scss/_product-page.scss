@@ -1,0 +1,546 @@
+main{
+    @import "breadcrumb";
+    @import "title-page";
+    
+    .wrapper{
+        @include wrapper-full();
+        
+        .product{
+            @include row-flex();
+            margin-top: 50px;
+            
+            .elem{
+                @include col();
+            }
+            
+            .imgs{
+                @include size(4);
+                
+                .control{
+                    position: absolute;
+                    top: 45%;
+                    cursor: pointer;
+                    z-index: 9;
+                    margin: 0 15px;
+                }
+                
+                .next{
+                    right: 0;
+                }
+                
+                .prev{
+                    left: 0;
+                }
+                
+                .slick-slide {
+                    cursor: default;
+                }
+                
+                .slider-product{
+                    border: solid 1px red;
+                    padding: 25px 0;
+                    margin-bottom: 25px;
+                    border: 1px solid #eee;
+                    box-shadow: 0 0 10px 3px rgba(238, 238, 238, 0.7);
+                    border-radius: 3px;
+                    
+                    .item{
+                        display: flex;
+                        justify-content: center;
+                    }
+                }
+                
+                .slider-nav-product{
+                    margin: 0 -20px;
+                    
+                    .item{
+                        margin: 0 20px;
+                        border: 2px solid #eee;
+                        box-shadow: 0 0 10px 3px rgba(238, 238, 238, 0.7);
+                        cursor: pointer;
+                        border-radius: 3px;
+                    }
+                    
+                    .item.slick-current{
+                        border: 2px solid $blue;
+                    }
+                }
+                
+                .add-page{
+                    p{
+                        padding: 40px 0 20px 0;
+                    }
+                }
+            }
+            
+            .prop{
+                @include size(4);
+                
+                .availability-code{
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: space-around;
+                    
+                    .availability{
+                        display: flex;
+                        flex-wrap: wrap;
+                        align-items: center;
+                        
+                        img{
+                            margin-right: 10px; 
+                        }
+                        
+                        span{
+                            color: $gray;
+                            font-size: 18px;
+                        }
+                    }
+                    
+                    .code{
+                        display: flex;
+                        flex-wrap: wrap;
+                        align-items: center;
+                        
+                        img{
+                            margin-right: 10px;
+                        }
+                        
+                        p{
+                            color: $gray;
+                            font-size: 18px;
+                        }
+                    }
+                }
+                .price{
+                    margin-top: 50px;
+                    margin-bottom: 20px;
+                    text-align: center;
+                    
+                    span{
+                        color: $gray;
+                        font-size: 30px;
+                    }
+                }
+                
+                .buy{
+                    text-align: center;
+                    margin-bottom: 30px;
+                    
+                    .btn.green{
+                        padding: 20px 80px;
+                    }
+                }
+                
+                .tools{
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: space-around;
+                    
+                    .compare a, .favorites a{
+                        display: flex;
+                        flex-wrap: wrap;
+                        align-items: center;
+                        color: $blue;
+                        text-decoration: none;
+                        &:hover{
+                            text-decoration: underline;
+                        }
+                        
+                        img{
+                            margin-right: 10px;
+                        }
+                    }
+                }
+                
+                .properties{
+                    margin-top: 60px;
+                    
+                    .property{
+                        display: flex;
+                        flex-wrap: wrap;
+                        margin-bottom: 20px;
+                        align-items: flex-start;
+                        justify-content: center;
+                        
+                        .img{
+                            margin-right: 10px;
+                            flex-basis: 60px;
+                            text-align: center;
+                            
+                        }
+                        
+                        .text{
+                            display: flex;
+                            flex-wrap: wrap;
+                            flex-direction: column;
+                            font-size: 16px;
+                            flex-basis: 285px;
+                            
+                            .name{
+                                color: $blue;
+                                margin-bottom: 5px;
+                            }
+                            
+                            .value{
+                                color: $gray;
+                            }
+                        }
+                    }
+                }
+            }
+            
+            .conditions{
+                @include size(4);
+                border-left: solid 1px #ede9e9;
+                padding-left: 20px;
+                
+                .return, .guarantee, .delivery, .payment{
+                    display: flex;
+                    flex-wrap: wrap;
+                    align-items: center;
+                    color: $gray;
+                    margin-bottom: 20px;
+                    padding-left: 30px;
+                    padding-bottom: 30px;
+                    border-bottom: solid 1px #ede9e9;
+                    
+                    img{
+                        margin-right: 20px;
+                    }
+                    
+                    .text{
+                        flex-basis: 300px;
+                        
+                        a{
+                            color: $blue;
+                            text-decoration: none;
+                            &:hover{
+                                text-decoration: underline;
+                            }
+                        }
+                        
+                        .btn{
+                            font-size: 14px;
+                            text-transform: none;
+                            color: $white;
+                            font-weight: normal;
+                            border-radius: 3px;
+                            text-decoration: none;
+                            padding: 3px 10px;
+                            
+                            &:hover{
+                                background-color: $blue;
+                            }
+                        }
+                        
+                        .btn.no-active{
+                            background-color: #94e0fe;
+                            border-color: #94e0fe;
+                        }
+                        
+                        li{
+                            margin-bottom: 10px;
+                        }
+                        
+                        .title{
+                            font-size: 18px;
+                            font-weight: 600;
+                            text-transform: uppercase;
+                            margin-bottom: 10px;
+                        }
+                    }
+                }
+                
+                .return{
+                    border-bottom: none;
+                    margin-bottom: 0;
+                }
+                
+                .tests{
+                    margin-bottom: 40px;
+                    .title{
+                        text-align: center;
+                        color: $gray;
+                        font-size: 18px;
+                        font-weight: 600;
+                        text-transform: uppercase;
+                        margin-bottom: 10px;
+                    }
+                    ul{
+                        display: flex;
+                        flex-wrap: wrap;
+                        justify-content: space-between;
+                        align-items: flex-end;
+                        
+                        li{
+                            display: flex;
+                            flex-wrap: wrap;
+                            flex-direction: column;
+                            color: $gray;
+                            text-align: center;
+                            flex-basis: 90px;
+                            
+                            img{
+                                align-self: center;
+                                margin-bottom: 10px;
+                            }
+                            
+                            .name{
+                                margin-bottom: 10px;
+                            }
+                            
+                            .value{
+                                background-color: $blue;
+                                color: $white;
+                                font-size: 16px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        
+        .content{
+            margin-top: 60px;
+            .tab{
+                border: solid 1px $gl;
+                border-radius: 3px;
+                border-top: none;
+                padding-bottom: 50px;
+                box-shadow: 0 0 10px 3px rgba(238, 238, 238, 0.7);
+            }
+            
+            ul{
+                display: flex;
+                /*justify-content: space-between;*/
+                
+                li{
+                    flex-basis: 33%;
+                    background-color: #e4e7ec;
+                    margin-right: 10px;
+                    text-align: center;
+                    padding: 10px 0;
+                    border-radius: 10px 10px 0 0;
+                    &:focus{
+                            outline: none;
+                        }
+                    &:active{
+                        outline: none;
+                    }
+                    
+                    a{
+                        font-size: 20px;
+                        text-decoration: none;
+                        color: $gray;
+                        display: block;
+                        
+                        &:focus{
+                            outline: none;
+                        }
+                        &:active{
+                            outline: none;
+                        }
+                    }
+                    
+                    &:last-child{
+                        margin-right: 0px;
+                    }
+                }
+                
+                li.ui-tabs-active{
+                    background-color: $black;
+                    
+                    a{
+                        color: $white;
+                    }
+                }
+            }
+            
+            .prop{
+                color: $gray;
+                
+                h2{
+                    text-align: center;
+                    font-size: 22px;
+                    color: $gray;
+                    padding: 50px 0;
+                    
+                    span{
+                        color: $blue;
+                    }
+                }
+                
+                p{
+                    font-size: 16px;
+                    padding: 0 50px;
+                    text-align: justify;
+                    line-height: 26px;
+                    font-family: Roboto-Light;
+                }
+                
+                .table-block{
+                    position: relative;
+                    margin-top: 60px;
+                    
+                    h3{
+                        font-size: 20px;
+                        font-weight: 600;
+                        padding: 25px 0 25px 30px;
+                    }
+                    
+                    table{
+                        tr:nth-child(even){
+                            background-color: #f4f4f5;
+                        }
+                        td{
+                            border: solid 1px $gl;
+                            border-left: none;
+                            font-size: 16px;
+                            padding: 10px 0 10px 30px;
+                            width: 400px;
+                        }
+                    }
+                    
+                    .pursuing-goods{
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        margin: 73px 50px 0 0;
+                        width: 380px;
+                        display: flex;
+                        flex-direction: column;
+                        
+                        .wrap{
+                            border: solid 1px $gl;
+                        }
+                        
+                        .header{
+                            display: flex;
+                            flex-wrap: wrap;
+                            text-align: center;
+                            border-bottom: solid 1px $gl;
+                            
+                            a{
+                                padding: 15px 0;
+                                text-decoration: none;
+                                color: $gray;
+                            }
+                            
+                            .your-product{
+                                background-color: #94e0fe;
+                                color: $white;
+                                flex-basis: 50%;
+                            }
+                            
+                            .payment{
+                                flex-basis: 50%;
+                            }
+                        }
+                        
+                        .title{
+                            font-size: 16px;
+                            text-align: center;
+                            padding: 20px 0;
+                            border-bottom: solid 1px $gl;
+                        }
+                        
+                        .body{
+                            display: flex;
+                            /*flex-wrap: wrap;*/
+                            align-items: center;
+                            border-bottom: solid 1px $gl;
+                            
+                            .img{
+                                padding: 40px 0 40px 40px;
+                                flex-basis: 50%;
+                                
+                                img{
+                                    width: 130px;
+                                }
+                            }
+                            
+                            .info{
+                                flex-basis: 50%;
+                                text-align: center;
+                                padding-right: 10px;
+                                
+                                div{
+                                    margin: 15px 0;
+                                }
+                                
+                                .price{
+                                    font-size: 22px;
+                                }
+                                
+                                .buy{
+                                    .btn.green{
+                                        padding: 10px 50px;
+                                        
+                                    }
+                                }
+                                
+                                .availability{
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                    
+                                    img{
+                                        margin-right: 10px;
+                                    }
+                                }
+                            }
+                        }
+                        
+                        .tools{
+                            display: flex;
+                            flex-wrap: wrap;
+                            justify-content: space-around;
+                            padding: 10px 0;
+                            
+                            div a{
+                                color: $blue;
+                                text-decoration: none;
+                                display: flex;
+                                align-items: center;
+                                
+                                img{
+                                    margin-right: 10px;
+                                }
+                                
+                                &:hover{
+                                    text-decoration:underline;
+                                }
+                            }
+                        }
+                        
+                        .add-page{
+                            p{
+                                margin: 0;
+                                padding: 20px 0;
+                            }
+                        }
+                    }
+                    .pursuing-goods.fix{
+                        position: fixed;
+                        right: 40px;
+                        background-color: $white;
+                        z-index: 1;
+                        margin: 0 50px 0 0;
+                    }
+                    .pursuing-goods.abs-bottom{
+                        position: absolute;
+                        bottom: 0px;
+                        top: inherit;
+                        margin: 0 50px 0 0;
+                    }
+                }
+            }
+        }
+        
+        @import "interesting-goods";
+        .interesting-goods{
+            border-top: none;
+        }
+
+    }
+}

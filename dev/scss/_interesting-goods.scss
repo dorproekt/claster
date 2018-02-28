@@ -1,0 +1,35 @@
+.interesting-goods{
+    margin-top: 20px;
+    border-top: 2px solid $gray-light;
+    h3{
+        font-size: 24px;
+        color: $gray;
+        padding: 20px 0;
+    }
+
+    .interesting-goods-wrap{
+        margin: 0 -20px;
+        @include sm(margin, 0 -15px);
+    }
+
+    .slick-slide img {
+        display: inherit;
+    }
+
+    @import "product";
+
+    .product{
+        margin: 0 20px 40px 20px;
+    }
+
+    .control{
+        position: absolute;
+        top: -50px;
+        right: 15px;
+        cursor: pointer;
+    }
+
+    .left{
+        right: 60px;
+    }
+}
