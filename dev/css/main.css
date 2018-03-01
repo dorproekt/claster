@@ -490,11 +490,16 @@ main .breadcrumb {
 }
 
 main .breadcrumb li {
-  margin: 40px 15px 40px 0;
+  margin: 40px 0 40px 0;
 }
 
 main .breadcrumb li img {
   margin-right: 8px;
+  margin-left: 8px;
+}
+
+main .breadcrumb li:first-child img {
+  margin-left: 0;
 }
 
 main .breadcrumb li a {
@@ -849,6 +854,7 @@ main .wrapper .product .conditions .delivery .text a,
 main .wrapper .product .conditions .payment .text a {
   color: #00a1e1;
   text-decoration: none;
+  display: inline-block;
 }
 
 main .wrapper .product .conditions .return .text a:hover,
@@ -909,6 +915,28 @@ main .wrapper .product .conditions .return {
   margin-bottom: 0;
 }
 
+main .wrapper .product .conditions .delivery .text .title {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+main .wrapper .product .conditions .delivery .text .title p {
+  margin-right: 10px;
+}
+
 main .wrapper .product .conditions .tests {
   margin-bottom: 40px;
 }
@@ -930,10 +958,9 @@ main .wrapper .product .conditions .tests ul {
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
   -webkit-box-align: end;
   -webkit-align-items: flex-end;
   -ms-flex-align: end;
@@ -991,12 +1018,21 @@ main .wrapper .content .tab {
   box-shadow: 0 0 10px 3px rgba(238, 238, 238, 0.7);
 }
 
+main .wrapper .content h4 {
+  display: none;
+  font-size: 20px;
+  color: #fff;
+  background: #000f26;
+  padding: 20px;
+  /*@include md(display, block);*/
+}
+
 main .wrapper .content ul {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  /*justify-content: space-between;*/
+  /*@include md(display, none);*/
 }
 
 main .wrapper .content ul li {
@@ -1213,6 +1249,10 @@ main .wrapper .content .prop .table-block .pursuing-goods .body .info .availabil
 
 main .wrapper .content .prop .table-block .pursuing-goods .body .info .availability img {
   margin-right: 10px;
+}
+
+main .wrapper .content .prop .table-block .pursuing-goods .body .info .arrow {
+  display: none;
 }
 
 main .wrapper .content .prop .table-block .pursuing-goods .tools {
@@ -1579,6 +1619,37 @@ footer .bottom-footer .wrapper .social-networks a {
   margin-left: 10px;
 }
 
+@media screen and (max-width: 1410px) {
+  main .wrapper .product .prop .properties .property .text {
+    -webkit-flex-basis: 280px;
+    -ms-flex-preferred-size: 280px;
+    flex-basis: 280px;
+  }
+
+  main .wrapper .product .conditions .return .text,
+  main .wrapper .product .conditions .guarantee .text,
+  main .wrapper .product .conditions .delivery .text,
+  main .wrapper .product .conditions .payment .text {
+    -webkit-flex-basis: 230px;
+    -ms-flex-preferred-size: 230px;
+    flex-basis: 230px;
+  }
+
+  main .wrapper .product .conditions .delivery .text .title p {
+    margin-bottom: 10px;
+  }
+
+  main .wrapper .product .conditions .tests ul li {
+    -webkit-flex-basis: 80px;
+    -ms-flex-preferred-size: 80px;
+    flex-basis: 80px;
+  }
+
+  main .wrapper .content .prop .table-block table td:last-child {
+    width: 200px;
+  }
+}
+
 @media screen and (max-width: 1200px) {
   header .top-header {
     font-size: 14px;
@@ -1606,6 +1677,41 @@ footer .bottom-footer .wrapper .social-networks a {
 
   header nav .menu li.item a i {
     margin-left: 5px;
+  }
+
+  main .wrapper .product .imgs {
+    width: -webkit-calc(100% - 30px);
+    width: calc(100% - 30px);
+  }
+
+  main .wrapper .product .imgs .slider-nav-product {
+    display: none;
+  }
+
+  main .wrapper .product .imgs .add-page {
+    display: none;
+  }
+
+  main .wrapper .product .prop {
+    width: -webkit-calc(50% - 30px);
+    width: calc(50% - 30px);
+  }
+
+  main .wrapper .product .conditions {
+    width: -webkit-calc(50% - 30px);
+    width: calc(50% - 30px);
+  }
+
+  main .wrapper .content .prop .table-block table td {
+    width: 300px;
+  }
+
+  main .wrapper .content .prop .table-block table td {
+    font-size: 16px;
+  }
+
+  main .wrapper .content .prop .table-block table td:last-child {
+    width: 100px;
   }
 
   footer .top-footer .wrapper div {
@@ -1750,6 +1856,210 @@ footer .bottom-footer .wrapper .social-networks a {
     margin-top: 10px;
   }
 
+  main .wrapper .product .prop {
+    width: -webkit-calc(100% - 30px);
+    width: calc(100% - 30px);
+  }
+
+  main .wrapper .product .prop .availability-code {
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+
+  main .wrapper .product .prop .buy .btn.green {
+    width: 100%;
+  }
+
+  main .wrapper .product .prop .buy .btn.green {
+    -webkit-border-radius: 0;
+    border-radius: 0;
+  }
+
+  main .wrapper .product .prop .tools {
+    display: none;
+  }
+
+  main .wrapper .product .prop .properties .property {
+    -webkit-box-pack: start;
+    -webkit-justify-content: start;
+    -ms-flex-pack: start;
+    justify-content: start;
+  }
+
+  main .wrapper .product .conditions {
+    width: -webkit-calc(100% - 30px);
+    width: calc(100% - 30px);
+  }
+
+  main .wrapper .product .conditions {
+    border-left: none;
+  }
+
+  main .wrapper .product .conditions {
+    border-top: solid 1px #ede9e9;
+  }
+
+  main .wrapper .product .conditions {
+    padding-top: 30px;
+  }
+
+  main .wrapper .product .conditions {
+    margin-top: 40px;
+  }
+
+  main .wrapper .product .conditions {
+    padding-left: 0;
+  }
+
+  main .wrapper .product .conditions .return,
+  main .wrapper .product .conditions .guarantee,
+  main .wrapper .product .conditions .delivery,
+  main .wrapper .product .conditions .payment {
+    padding-left: 0;
+  }
+
+  main .wrapper .product .conditions .return .text,
+  main .wrapper .product .conditions .guarantee .text,
+  main .wrapper .product .conditions .delivery .text,
+  main .wrapper .product .conditions .payment .text {
+    -webkit-flex-basis: 300px;
+    -ms-flex-preferred-size: 300px;
+    flex-basis: 300px;
+  }
+
+  main .wrapper .product .conditions .delivery .text .title p {
+    margin-bottom: 0;
+  }
+
+  main .wrapper .product .conditions .payment {
+    border-bottom: none;
+  }
+
+  main .wrapper .product .conditions .payment {
+    padding-bottom: 0;
+  }
+
+  main .wrapper .product .conditions .tests {
+    display: none;
+  }
+
+  main .wrapper .content .tab {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+
+  main .wrapper .content .prop .table-block table {
+    width: 100%;
+  }
+
+  main .wrapper .content .prop .table-block table td {
+    width: 50%;
+  }
+
+  main .wrapper .content .prop .table-block .pursuing-goods {
+    margin: 73px -40px 0 0;
+  }
+
+  main .wrapper .content .prop .table-block .pursuing-goods .header {
+    display: none;
+  }
+
+  main .wrapper .content .prop .table-block .pursuing-goods .title {
+    padding: 0;
+  }
+
+  main .wrapper .content .prop .table-block .pursuing-goods .title {
+    display: none;
+  }
+
+  main .wrapper .content .prop .table-block .pursuing-goods .body .img {
+    display: none;
+  }
+
+  main .wrapper .content .prop .table-block .pursuing-goods .body .info {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+
+  main .wrapper .content .prop .table-block .pursuing-goods .body .info {
+    -webkit-flex-basis: 100%;
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+  }
+
+  main .wrapper .content .prop .table-block .pursuing-goods .body .info {
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+
+  main .wrapper .content .prop .table-block .pursuing-goods .body .info {
+    -webkit-justify-content: space-around;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+  }
+
+  main .wrapper .content .prop .table-block .pursuing-goods .body .info {
+    background-color: #000f26;
+  }
+
+  main .wrapper .content .prop .table-block .pursuing-goods .body .info {
+    color: #fff;
+  }
+
+  main .wrapper .content .prop .table-block .pursuing-goods .body .info .buy .btn.green {
+    padding: 5px 40px;
+  }
+
+  main .wrapper .content .prop .table-block .pursuing-goods .body .info .buy .btn.green {
+    font-size: 16px;
+  }
+
+  main .wrapper .content .prop .table-block .pursuing-goods .body .info .buy .btn.green {
+    background-color: #00a1e1;
+  }
+
+  main .wrapper .content .prop .table-block .pursuing-goods .body .info .buy .btn.green {
+    border-color: #00a1e1;
+  }
+
+  main .wrapper .content .prop .table-block .pursuing-goods .body .info .buy .btn.green {
+    color: #fff;
+  }
+
+  main .wrapper .content .prop .table-block .pursuing-goods .body .info .availability {
+    display: none;
+  }
+
+  main .wrapper .content .prop .table-block .pursuing-goods .body .info .arrow {
+    display: block;
+  }
+
+  main .wrapper .content .prop .table-block .pursuing-goods .body .info .arrow {
+    font-size: 28px;
+  }
+
+  main .wrapper .content .prop .table-block .pursuing-goods .tools {
+    display: none;
+  }
+
+  main .wrapper .content .prop .table-block .pursuing-goods .add-page {
+    display: none;
+  }
+
+  main .wrapper .content .prop .table-block .pursuing-goods.fix {
+    margin: 0 -40px 0 0;
+  }
+
+  main .wrapper .content .prop .table-block .pursuing-goods.abs-bottom {
+    margin: 0 -40px 0 0;
+  }
+
   footer .top-footer .wrapper div {
     width: -webkit-calc(50% - 30px);
     width: calc(50% - 30px);
@@ -1782,6 +2092,14 @@ footer .bottom-footer .wrapper .social-networks a {
   main .breadcrumb {
     padding-left: 15px;
     padding-right: 15px;
+  }
+
+  main .breadcrumb li {
+    margin: 10px 0 0 0;
+  }
+
+  main .breadcrumb li:last-child {
+    margin-bottom: 10px;
   }
 
   main .title-page h1 {
@@ -1828,6 +2146,37 @@ footer .bottom-footer .wrapper .social-networks a {
 
   header nav .navbar-toggler {
     width: 20px;
+  }
+
+  main .title-page h1 {
+    font-size: 16px;
+  }
+
+  main .wrapper .product .prop .availability-code .availability span {
+    font-size: 14px;
+  }
+
+  main .wrapper .product .prop .availability-code .code p {
+    font-size: 14px;
+  }
+
+  main .wrapper .product .prop .properties .property .text {
+    -webkit-flex-basis: 220px;
+    -ms-flex-preferred-size: 220px;
+    flex-basis: 220px;
+  }
+
+  main .wrapper .product .conditions .return .text,
+  main .wrapper .product .conditions .guarantee .text,
+  main .wrapper .product .conditions .delivery .text,
+  main .wrapper .product .conditions .payment .text {
+    -webkit-flex-basis: 215px;
+    -ms-flex-preferred-size: 215px;
+    flex-basis: 215px;
+  }
+
+  main .wrapper .product .conditions .delivery .text .title p {
+    margin-bottom: 10px;
   }
 
   footer .top-footer .wrapper div {

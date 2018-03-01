@@ -12,9 +12,13 @@ var settings = {
     },
     breakPoints: {
         
+        xlg: {
+            width: '1410px', 
+        },
         lg: {
             width: '1200px', /* -> @media (max-width: 1100px) */
         },
+        
         md: {
             width: '992px'
         },

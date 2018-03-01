@@ -248,22 +248,35 @@
                </div>
                <div class="conditions elem">
                    <div class="return">
-                       <img src="img/exchange.png" alt="">
+                       <div class="img">
+                           <img src="img/exchange.png" alt="">
+                       </div>
                        <div class="text">
                            <p class="title">Гарантия на возврат/обмен</p> 
                            <p>Без проблем. Читайте <a href="#">условия возврата</a></p>
                        </div>
                    </div>
                    <div class="guarantee">
-                        <img src="img/medal.png" alt="medal">
+                        <div class="img">
+                            <img src="img/medal.png" alt="medal">
+                        </div>
                         <div class="text">
                             <p class="title">36 МЕСЯЦЕВ ГАРАНТИИ</p> 
                         </div>
                    </div>
                    <div class="delivery">
-                        <img src="img/shipped.png" alt="">
+                        <div class="img">
+                            <img src="img/shipped.png" alt="">
+                        </div>
                         <div class="text">
-                            <p class="title">Доставка <a href="#" class="btn">Киев</a> <a href="#" class="btn no-active">Другие города</a></p>
+                            <div class="title">
+                                <p>Доставка</p>
+                                <div class="city">
+                                    <a href="#" class="btn">Киев</a> 
+                                    <a href="#" class="btn no-active">Другие города</a>
+                                </div>
+                            </div>
+                            
                             <ul>
                                 <li>— Самовывоз из магазина (карта проезда)</li>
                                 <li>— В отделении «Нова Пошта»</li>
@@ -272,7 +285,9 @@
                         </div>
                    </div>
                    <div class="payment">
-                       <img src="img/payment.png" alt="">
+                       <div class="img">
+                           <img src="img/payment.png" alt="">
+                       </div>
                        <div class="text">
                            <p class="title">Оплата товара</p>
                            <p>Наличными, Безналичными, Visa/MasterCard, LiqPay</p>
@@ -312,6 +327,7 @@
                     <li><a href="#video">Тесты/видеообзоры</a></li>
                     <li><a href="#reviews">Отзывы</a></li>
                 </ul>
+                <h4>Характеристики</h4>
                 <div id="prop" class="prop tab">
                     <h2>Технические характеристики <span>Hewlett Packard HP DL160P Gen8 G8</span></h2>
                     <p>Проснувшись однажды утром после беспокойного сна, Грегор Замза обнаружил, что он у себя в постели превратился в страшное насекомое. Лежа на панцирнотвердой спине, он видел, стоило ему приподнять голову, свой коричневый, выпуклый, разделенный дугообразными чешуйками живот, на верхушке которого еле держалось готовое вот-вот окончательно сползти одеяло. Его многочисленные, убого тонкие по сравнению с остальным телом ножки беспомощно копошились у него перед глазами. «Что со мной случилось? » – подумал он.</p>
@@ -437,6 +453,9 @@
                                             <img src="img/check-green.png" alt="">
                                             <span>Есть в наличии</span>
                                         </div>
+                                        <div class="arrow">
+                                            <i class="fas fa-chevron-circle-up"></i>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="tools">
@@ -473,7 +492,9 @@
                         </div>
                     </div>
                 </div>
+                <h4>Тесты/видеообзоры</h4>
                 <div id="video" class="video tab">Тесты/видеообзоры</div>
+                <h4>Отзывы</h4>
                 <div id="reviews" class="reviews tab">Отзывы</div>
             </div>
             <div class="interesting-goods">
@@ -770,6 +791,7 @@
     <script src="libs/slick/slick.js"></script>
     <script src="libs/lightbox/js/lightbox.js"></script>
     <script src="libs/tabs/jquery-ui-tabs.js"></script>
+    <script src="libs/accordion/jquery-ui-accordion.js"></script>
     <script src="js/list-products.js"></script>
     <script src="js/product.js"></script>
     <script src="js/main.jq.js"></script>

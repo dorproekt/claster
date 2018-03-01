@@ -7,8 +7,20 @@
     li{
         img{
             margin-right: 8px;
+            margin-left: 8px;
         }
-        margin: 40px 15px 40px 0;
+        margin: 40px 0 40px 0;
+        @include sm(margin, 10px 0 0 0);
+        
+        &:last-child{
+            @include sm(margin-bottom, 10px);
+        }
+        
+        &:first-child{
+            img{
+                margin-left: 0;
+            }
+        }
         a{
             color: $blue;
             text-decoration: none;

@@ -1,18 +1,21 @@
 $columns: 12;
 $atom: (100% / $columns);
 
+$break_xlg: 1410px;
 $break_lg: 1200px;
 $break_md: 992px;
 $break_sm: 768px;
 $break_xs: 576px;
 
 $offset: 30px;
+$offset_xlg: $offset;
 $offset_lg: $offset;
 $offset_md: $offset;
 $offset_sm: $offset;
 $offset_xs: $offset;
 
 $offset_one_side: ($offset / 2);
+$offset_xlg_one_side: ($offset_xlg / 2);
 $offset_lg_one_side: ($offset_lg / 2);
 $offset_md_one_side: ($offset_md / 2);
 $offset_sm_one_side: ($offset_sm / 2);
@@ -87,6 +90,11 @@ $fields_sm: 15px;
     width: #{calc(#{$val} - #{$offset})};
 }
 
+@mixin size-xlg($n){
+    $val: 100% / $columns * $n;
+    @include xlg(width, #{calc(#{$val} - #{$offset_xlg})});
+}
+
 @mixin size-lg($n){
     $val: 100% / $columns * $n;
     @include lg(width, #{calc(#{$val} - #{$offset_lg})});
@@ -137,6 +145,38 @@ $fields_sm: 15px;
 @mixin shift-padding-right($n){
     $val: 100% / $columns * $n;
     padding-right: #{calc(#{$val} + #{$offset_one_side})};
+}
+
+@mixin shift-xlg($n){
+    $val: 100% / $columns * $n;
+    @include xlg(margin-left, #{calc(#{$val} + #{$offset_xlg_one_side})});
+    @include xlg(margin-right, #{calc(#{$val} + #{$offset_xlg_one_side})});
+}
+
+@mixin shift-xlg-left($n){
+    $val: 100% / $columns * $n;
+    @include xlg(margin-left, #{calc(#{$val} + #{$offset_xlg_one_side})});
+}
+
+@mixin shift-xlg-right($n){
+    $val: 100% / $columns * $n;
+    @include xlg(margin-right, #{calc(#{$val} + #{$offset_xlg_one_side})});
+}
+
+@mixin shift-xlg-padding($n){
+    $val: 100% / $columns * $n;
+    @include xlg(padding-left, #{calc(#{$val} + #{$offset_xlg_one_side})});
+    @include xlg(padding-right, #{calc(#{$val} + #{$offset_xlg_one_side})});
+}
+
+@mixin shift-xlg-padding-left($n){
+    $val: 100% / $columns * $n;
+    @include xlg(padding-left, #{calc(#{$val} + #{$offset_xlg_one_side})});
+}
+
+@mixin shift-xlg-padding-right($n){
+    $val: 100% / $columns * $n;
+    @include xlg(padding-right, #{calc(#{$val} + #{$offset_xlg_one_side})});
 }
 
 @mixin shift-lg($n){
@@ -265,6 +305,18 @@ $fields_sm: 15px;
 @mixin shift-xs-padding-right($n){
     $val: 100% / $columns * $n;
     @include xs(padding-right, #{calc(#{$val} + #{$offset_xs_one_side})});
+}
+
+@mixin xlg($name, $value){
+    @media screen and (max-width: $break_xlg){
+        #{$name}: $value;
+    }
+}
+
+@mixin xlg-block(){
+    @media screen and (max-width: $break_xlg){
+        @content;
+    }
 }
 
 @mixin lg($name, $value){

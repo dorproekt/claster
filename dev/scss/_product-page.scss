@@ -15,6 +15,7 @@ main{
             
             .imgs{
                 @include size(4);
+                @include size-lg(12);
                 
                 .control{
                     position: absolute;
@@ -52,6 +53,7 @@ main{
                 
                 .slider-nav-product{
                     margin: 0 -20px;
+                    @include lg(display, none);
                     
                     .item{
                         margin: 0 20px;
@@ -67,6 +69,7 @@ main{
                 }
                 
                 .add-page{
+                    @include lg(display, none);
                     p{
                         padding: 40px 0 20px 0;
                     }
@@ -75,11 +78,14 @@ main{
             
             .prop{
                 @include size(4);
+                @include size-lg(6);
+                @include size-md(12);
                 
                 .availability-code{
                     display: flex;
                     flex-wrap: wrap;
                     justify-content: space-around;
+                    @include md(justify-content, space-between);
                     
                     .availability{
                         display: flex;
@@ -93,6 +99,7 @@ main{
                         span{
                             color: $gray;
                             font-size: 18px;
+                            @include xs(font-size, 14px);
                         }
                     }
                     
@@ -108,6 +115,7 @@ main{
                         p{
                             color: $gray;
                             font-size: 18px;
+                            @include xs(font-size, 14px);
                         }
                     }
                 }
@@ -128,6 +136,8 @@ main{
                     
                     .btn.green{
                         padding: 20px 80px;
+                        @include md(width, 100%);
+                        @include md(border-radius, 0);
                     }
                 }
                 
@@ -135,6 +145,7 @@ main{
                     display: flex;
                     flex-wrap: wrap;
                     justify-content: space-around;
+                    @include md(display, none);
                     
                     .compare a, .favorites a{
                         display: flex;
@@ -161,6 +172,7 @@ main{
                         margin-bottom: 20px;
                         align-items: flex-start;
                         justify-content: center;
+                        @include md(justify-content, start);
                         
                         .img{
                             margin-right: 10px;
@@ -175,6 +187,8 @@ main{
                             flex-direction: column;
                             font-size: 16px;
                             flex-basis: 285px;
+                            @include xlg(flex-basis, 280px);
+                            @include xs(flex-basis, 220px);
                             
                             .name{
                                 color: $blue;
@@ -191,8 +205,15 @@ main{
             
             .conditions{
                 @include size(4);
+                @include size-lg(6);
+                @include size-md(12);
                 border-left: solid 1px #ede9e9;
+                @include md(border-left, none);
+                @include md(border-top, solid 1px #ede9e9);
+                @include md(padding-top, 30px);
+                @include md(margin-top, 40px);
                 padding-left: 20px;
+                @include md(padding-left, 0);
                 
                 .return, .guarantee, .delivery, .payment{
                     display: flex;
@@ -201,6 +222,7 @@ main{
                     color: $gray;
                     margin-bottom: 20px;
                     padding-left: 30px;
+                    @include md(padding-left, 0);
                     padding-bottom: 30px;
                     border-bottom: solid 1px #ede9e9;
                     
@@ -210,10 +232,15 @@ main{
                     
                     .text{
                         flex-basis: 300px;
+                        @include xlg(flex-basis, 230px);
+                        @include md(flex-basis, 300px);
+                        @include xs(flex-basis, 215px);
                         
                         a{
                             color: $blue;
                             text-decoration: none;
+                            display: inline-block;
+
                             &:hover{
                                 text-decoration: underline;
                             }
@@ -256,8 +283,33 @@ main{
                     margin-bottom: 0;
                 }
                 
+                .delivery{
+                    .text{
+                        .title{
+                            display: flex;
+                            flex-wrap: wrap;
+                            align-items: center;
+                            justify-content: center;
+                            
+                            p{
+                                margin-right: 10px;
+                                @include xlg(margin-bottom, 10px);
+                                @include md(margin-bottom, 0);
+                                @include xs(margin-bottom, 10px);
+                            }
+                            
+                        }
+                    }
+                }
+                
+                .payment{
+                   @include md(border-bottom, none); 
+                   @include md(padding-bottom, 0); 
+                }
+                
                 .tests{
                     margin-bottom: 40px;
+                    @include md(display, none);
                     .title{
                         text-align: center;
                         color: $gray;
@@ -269,7 +321,7 @@ main{
                     ul{
                         display: flex;
                         flex-wrap: wrap;
-                        justify-content: space-between;
+                        justify-content: space-around;
                         align-items: flex-end;
                         
                         li{
@@ -279,6 +331,7 @@ main{
                             color: $gray;
                             text-align: center;
                             flex-basis: 90px;
+                            @include xlg(flex-basis, 80px);
                             
                             img{
                                 align-self: center;
@@ -308,11 +361,22 @@ main{
                 border-top: none;
                 padding-bottom: 50px;
                 box-shadow: 0 0 10px 3px rgba(238, 238, 238, 0.7);
+                @include md(box-shadow, none);
+            }
+            
+            h4{
+                display: none;
+                font-size: 20px;
+                color: $white;
+                background: $black;
+                padding: 20px;
+                /*@include md(display, block);*/
             }
             
             ul{
                 display: flex;
-                /*justify-content: space-between;*/
+                /*@include md(display, none);*/
+
                 
                 li{
                     flex-basis: 33%;
@@ -389,6 +453,7 @@ main{
                     }
                     
                     table{
+                        @include md(width, 100%);
                         tr:nth-child(even){
                             background-color: #f4f4f5;
                         }
@@ -398,6 +463,14 @@ main{
                             font-size: 16px;
                             padding: 10px 0 10px 30px;
                             width: 400px;
+                            @include lg(width, 300px);
+                            @include md(width, 50%);
+                            @include lg(font-size, 16px);
+                            
+                            &:last-child{
+                                @include xlg(width, 200px);
+                                @include lg(width, 100px);
+                            }
                         }
                     }
                     
@@ -406,6 +479,7 @@ main{
                         top: 0;
                         right: 0;
                         margin: 73px 50px 0 0;
+                        @include md( margin, 73px -40px 0 0);
                         width: 380px;
                         display: flex;
                         flex-direction: column;
@@ -419,6 +493,7 @@ main{
                             flex-wrap: wrap;
                             text-align: center;
                             border-bottom: solid 1px $gl;
+                            @include md(display, none);
                             
                             a{
                                 padding: 15px 0;
@@ -441,7 +516,9 @@ main{
                             font-size: 16px;
                             text-align: center;
                             padding: 20px 0;
+                            @include md(padding, 0);
                             border-bottom: solid 1px $gl;
+                            @include md(display, none);
                         }
                         
                         .body{
@@ -453,6 +530,7 @@ main{
                             .img{
                                 padding: 40px 0 40px 40px;
                                 flex-basis: 50%;
+                                @include md(display, none);
                                 
                                 img{
                                     width: 130px;
@@ -463,6 +541,12 @@ main{
                                 flex-basis: 50%;
                                 text-align: center;
                                 padding-right: 10px;
+                                @include md(display, flex);
+                                @include md(flex-basis, 100%);
+                                @include md(align-items, center);
+                                @include md(justify-content, space-around);
+                                @include md(background-color, $black);
+                                @include md(color, $white);
                                 
                                 div{
                                     margin: 15px 0;
@@ -475,11 +559,17 @@ main{
                                 .buy{
                                     .btn.green{
                                         padding: 10px 50px;
+                                        @include md(padding, 5px 40px);
+                                        @include md(font-size, 16px);
+                                        @include md(background-color, $blue);
+                                        @include md(border-color, $blue);
+                                        @include md(color, $white);
                                         
                                     }
                                 }
                                 
                                 .availability{
+                                    @include md(display, none);
                                     display: flex;
                                     align-items: center;
                                     justify-content: center;
@@ -487,6 +577,12 @@ main{
                                     img{
                                         margin-right: 10px;
                                     }
+                                }
+                                
+                                .arrow{
+                                    display: none;
+                                    @include md(display, block);
+                                    @include md(font-size, 28px);
                                 }
                             }
                         }
@@ -496,6 +592,7 @@ main{
                             flex-wrap: wrap;
                             justify-content: space-around;
                             padding: 10px 0;
+                            @include md(display, none);
                             
                             div a{
                                 color: $blue;
@@ -514,6 +611,7 @@ main{
                         }
                         
                         .add-page{
+                            @include md(display, none);
                             p{
                                 margin: 0;
                                 padding: 20px 0;
@@ -526,12 +624,14 @@ main{
                         background-color: $white;
                         z-index: 1;
                         margin: 0 50px 0 0;
+                        @include md(margin, 0 -40px 0 0);
                     }
                     .pursuing-goods.abs-bottom{
                         position: absolute;
                         bottom: 0px;
                         top: inherit;
                         margin: 0 50px 0 0;
+                        @include md(margin, 0 -40px 0 0);
                     }
                 }
             }

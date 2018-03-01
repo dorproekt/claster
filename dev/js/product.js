@@ -23,8 +23,6 @@ $(document).ready(function(){
     
     lightbox.option();
     
-    $( "#content" ).tabs();
-    
     let top = $('.pursuing-goods .wrap').offset().top;
     let h = $('.pursuing-goods').height();
     let h2 = $('.table-block').height();
@@ -48,5 +46,23 @@ $(document).ready(function(){
             $('.pursuing-goods').addClass('abs-bottom');
         }
 
+    });
+    
+    var widthScreen = screen.width;
+    
+    if(widthScreen >= 1200){
+        $( "#content" ).tabs();
+    }else{
+        $( "#content ul" ).remove();
+        $( "#content h4" ).css('display', 'block');
+        $( "#content" ).accordion({
+            collapsible: true,
+            heightStyle: "content"
+        });
+    }
+    
+    $('.arrow').click(function(){
+        console.log($(this).parent('.info').siblings('.title').attr('class'));
+        $(this).parents('.body').siblings('.title').slideToggle(400);
     });
 });
