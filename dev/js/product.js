@@ -17,37 +17,51 @@ $(document).ready(function(){
         slidesToScroll: 1,
         asNavFor: '.slider-product',
         dots: false,
-        /*centerMode: true,*/
         focusOnSelect: true
     });
     
     lightbox.option();
     
-    let top = $('.pursuing-goods .wrap').offset().top;
-    let h = $('.pursuing-goods').height();
-    let h2 = $('.table-block').height();
-    //console.log(h, h2);
+    $('.city a').click(function(){
+        console.log($(this).attr('href').slice(1));
+        var activeClass = '.' + $(this).attr('href').slice(1);
+        
+        $(activeClass).css('display', 'block');
+    });
     
-    $(window).scroll(function(e){
-        let t = $(window).scrollTop();
+/* pursuing-goods */
+    $('.table-block').after('<div class="test"></div>');
+    
+    var h1 = $('.table-block table').offset().top;
+    var h2 = $('.test').offset().top;
+    var h3 = $('.pursuing-goods').height();
+    var h4 = h2 - h3;
+    $('.test').remove();
+    
+    $(window).scroll(function() {
+        var line = $(window).scrollTop();
         
-        if(t >= top && t <= top + h){
+        if(line > h1){
             $('.pursuing-goods').addClass('fix');
-            $('.pursuing-goods').removeClass('abs-bottom'); 
-            console.log(1);
-        }
-        if(t < top){
-            $('.pursuing-goods').removeClass('fix');
-            console.log(2);
         }
         
-        if(t > top + h2 - h){
+        if(line > h4){
             $('.pursuing-goods').removeClass('fix');
             $('.pursuing-goods').addClass('abs-bottom');
         }
-
+        
+        if(line <= h4 && line > h1){
+            $('.pursuing-goods').removeClass('abs-bottom');
+            $('.pursuing-goods').addClass('fix');
+        }
+        
+        if(line < h1){
+            $('.pursuing-goods').removeClass('fix');
+        }
     });
-    
+/* pursuing-goods */
+      
+/* tab/accordion */
     var widthScreen = screen.width;
     
     if(widthScreen >= 1200){
@@ -65,4 +79,6 @@ $(document).ready(function(){
         console.log($(this).parent('.info').siblings('.title').attr('class'));
         $(this).parents('.body').siblings('.title').slideToggle(400);
     });
+/* tab/accordion */
+    
 });
