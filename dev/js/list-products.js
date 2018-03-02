@@ -83,12 +83,12 @@ $(document).ready(function(){
     
     //select
     $('.select').click(function(){
-        $('.options').slideToggle(100);
+        $(this).children('.options').slideToggle(100);
     });
     
     $('.option').click(function(){
         var option = $(this).html();
-        $('.select span').html(option);
+        $(this).parent().siblings('span').html(option);
         //console.log($(this).html());
     });
     

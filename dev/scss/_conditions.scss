@@ -1,0 +1,185 @@
+.conditions{
+    border-left: solid 1px #ede9e9;
+    @include md(border-left, none);
+    @include md(border-top, solid 1px #ede9e9);
+    @include md(padding-top, 30px);
+    @include md(margin-top, 40px);
+    padding-left: 20px;
+    @include md(padding-left, 0);
+
+    .return, .guarantee, .delivery, .payment{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        color: $gray;
+        margin-bottom: 20px;
+        padding-left: 30px;
+        @include md(padding-left, 0);
+        padding-bottom: 30px;
+        border-bottom: solid 1px #ede9e9;
+
+        img{
+            margin-right: 20px;
+        }
+
+        .text{
+            flex-basis: 300px;
+            @include xlg(flex-basis, 230px);
+            @include md(flex-basis, 300px);
+            @include xs(flex-basis, 215px);
+
+            .other{
+                display: none;
+            }
+
+            a{
+                color: $blue;
+                text-decoration: none;
+                display: inline-block;
+
+                &:hover{
+                    text-decoration: underline;
+                }
+            }
+
+            .btn{
+                font-size: 14px;
+                text-transform: none;
+                color: $white;
+                font-weight: normal;
+                border-radius: 3px;
+                text-decoration: none;
+                padding: 3px 10px;
+
+                &:hover{
+                    background-color: $blue;
+                }
+            }
+
+            .btn.no-active{
+                background-color: #94e0fe;
+                border-color: #94e0fe;
+            }
+
+            li{
+                margin-bottom: 10px;
+            }
+
+            .title{
+                font-size: 18px;
+                font-weight: 600;
+                text-transform: uppercase;
+                margin-bottom: 10px;
+            }
+        }
+    }
+    
+    .price{
+        margin-top: 20px;
+        margin-bottom: 20px;
+        text-align: center;
+
+        span{
+            color: $gray;
+            font-size: 30px;
+        }
+    }
+    
+    .buy{
+        text-align: center;
+        margin-bottom: 30px;
+        border-bottom: solid 1px #ede9e9;
+
+        .btn.green{
+            padding: 20px 80px;
+            @include md(width, 100%);
+            @include md(border-radius, 0);
+        }
+        
+        p{
+            font-size: 16px;
+            color: $gray;
+            margin: 20px 0;
+        }
+    }
+
+    .return{
+        border-bottom: none;
+        margin-bottom: 0;
+    }
+
+    .delivery{
+        .text{
+            .title{
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                justify-content: center;
+
+                p{
+                    margin-right: 10px;
+                    @include xlg(margin-bottom, 10px);
+                    @include md(margin-bottom, 0);
+                    @include xs(margin-bottom, 10px);
+                }
+
+            }
+        }
+    }
+
+    .payment{
+       @include md(border-bottom, none); 
+       @include md(padding-bottom, 0); 
+    }
+
+    .tests{
+        margin-bottom: 40px;
+        @include md(display, none);
+        .title{
+            text-align: center;
+            color: $gray;
+            font-size: 18px;
+            font-weight: 600;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+        ul{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-items: flex-end;
+
+            li{
+                display: flex;
+                flex-wrap: wrap;
+                flex-direction: column;
+                color: $gray;
+                text-align: center;
+                flex-basis: 90px;
+                @include xlg(flex-basis, 80px);
+
+                img{
+                    align-self: center;
+                    margin-bottom: 10px;
+                }
+
+                .name{
+                    margin-bottom: 10px;
+                }
+
+                .value{
+                    background-color: $blue;
+                    color: $white;
+                    font-size: 16px;
+                }
+            }
+        }
+    } 
+}
+
+.conditions.modifier{ 
+    .payment{
+        border-bottom: none;
+    }
+    margin-bottom: 50px;
+}            

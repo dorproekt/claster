@@ -28,37 +28,39 @@ $(document).ready(function(){
         
         $(activeClass).css('display', 'block');
     });
-    
+
 /* pursuing-goods */
-    $('.table-block').after('<div class="test"></div>');
+    if($('div').is('.pursuing-goods')){
+        $('.table-block').after('<div class="test"></div>');
     
-    var h1 = $('.table-block table').offset().top;
-    var h2 = $('.test').offset().top;
-    var h3 = $('.pursuing-goods').height();
-    var h4 = h2 - h3;
-    $('.test').remove();
-    
-    $(window).scroll(function() {
-        var line = $(window).scrollTop();
-        
-        if(line > h1){
-            $('.pursuing-goods').addClass('fix');
-        }
-        
-        if(line > h4){
-            $('.pursuing-goods').removeClass('fix');
-            $('.pursuing-goods').addClass('abs-bottom');
-        }
-        
-        if(line <= h4 && line > h1){
-            $('.pursuing-goods').removeClass('abs-bottom');
-            $('.pursuing-goods').addClass('fix');
-        }
-        
-        if(line < h1){
-            $('.pursuing-goods').removeClass('fix');
-        }
-    });
+        var h1 = $('.table-block table').offset().top;
+        var h2 = $('.test').offset().top;
+        var h3 = $('.pursuing-goods').height();
+        var h4 = h2 - h3;
+        $('.test').remove();
+
+        $(window).scroll(function() {
+            var line = $(window).scrollTop();
+
+            if(line > h1){
+                $('.pursuing-goods').addClass('fix');
+            }
+
+            if(line > h4){
+                $('.pursuing-goods').removeClass('fix');
+                $('.pursuing-goods').addClass('abs-bottom');
+            }
+
+            if(line <= h4 && line > h1){
+                $('.pursuing-goods').removeClass('abs-bottom');
+                $('.pursuing-goods').addClass('fix');
+            }
+
+            if(line < h1){
+                $('.pursuing-goods').removeClass('fix');
+            }
+        });   
+    }
 /* pursuing-goods */
       
 /* tab/accordion */

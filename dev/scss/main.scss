@@ -93,6 +93,39 @@ body{
     }
 }
 
+.select.btn-big{
+    box-shadow: none;
+    border: solid 1px #e3e2e2;
+    border-radius: 5px 0 0 5px;
+    color: $gray;
+    
+    i{
+        margin-left: 10px;
+        position: absolute;
+        top: -1px;
+        right: -50px;
+        background-color: #00a1e1;
+        color: #fff;
+        padding: 5px 15px;
+        border-radius: 0 5px 5px 0;
+        font-size: 31px;
+    }
+    
+    .options{
+        border: solid 1px #e3e2e2;
+        border-top: none;
+        top: 96%;
+    }
+}
+
+.select.btn-big.big{
+    width: 252px;
+}
+
+.select.btn-big.small{
+    width: 75px;
+}
+
 .checkbox{
     i{
         border: solid 1px #f1f2f2;

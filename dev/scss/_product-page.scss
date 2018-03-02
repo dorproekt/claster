@@ -5,6 +5,13 @@ main{
     .wrapper{
         @include wrapper-full();
         
+        .desc{
+            color: $gray;
+            font-size: 16px;
+            text-align:justify;
+            margin-top: 50px;
+        }
+        
         .product{
             @include row-flex();
             margin-top: 50px;
@@ -16,64 +23,7 @@ main{
             .imgs{
                 @include size(4);
                 @include size-lg(12);
-                
-                .control{
-                    position: absolute;
-                    top: 45%;
-                    cursor: pointer;
-                    z-index: 9;
-                    margin: 0 15px;
-                }
-                
-                .next{
-                    right: 0;
-                }
-                
-                .prev{
-                    left: 0;
-                }
-                
-                .slick-slide {
-                    cursor: default;
-                }
-                
-                .slider-product{
-                    border: solid 1px red;
-                    padding: 25px 0;
-                    margin-bottom: 25px;
-                    border: 1px solid #eee;
-                    box-shadow: 0 0 10px 3px rgba(238, 238, 238, 0.7);
-                    border-radius: 3px;
-                    
-                    .item{
-                        display: flex;
-                        justify-content: center;
-                    }
-                }
-                
-                .slider-nav-product{
-                    margin: 0 -20px;
-                    @include lg(display, none);
-                    
-                    .item{
-                        margin: 0 20px;
-                        border: 2px solid #eee;
-                        box-shadow: 0 0 10px 3px rgba(238, 238, 238, 0.7);
-                        cursor: pointer;
-                        border-radius: 3px;
-                    }
-                    
-                    .item.slick-current{
-                        border: 2px solid $blue;
-                    }
-                }
-                
-                .add-page{
-                    @include lg(display, none);
-                    p{
-                        padding: 40px 0 20px 0;
-                    }
-                }
+                @import "imgs";
             }
             
             .prop{
@@ -203,158 +153,47 @@ main{
                 }
             }
             
-            .conditions{
-                @include size(4);
+            .imgs.modifier{
+                @include size-xlg(3);
+                @include size-lg(12);
+            }
+            .prop.modifier{
+                @include size-xlg(5);
                 @include size-lg(6);
                 @include size-md(12);
-                border-left: solid 1px #ede9e9;
-                @include md(border-left, none);
-                @include md(border-top, solid 1px #ede9e9);
-                @include md(padding-top, 30px);
-                @include md(margin-top, 40px);
-                padding-left: 20px;
-                @include md(padding-left, 0);
+                .properties{
+                    margin-top: 0;
+                }
                 
-                .return, .guarantee, .delivery, .payment{
-                    display: flex;
-                    flex-wrap: wrap;
-                    align-items: center;
-                    color: $gray;
-                    margin-bottom: 20px;
-                    padding-left: 30px;
-                    @include md(padding-left, 0);
-                    padding-bottom: 30px;
-                    border-bottom: solid 1px #ede9e9;
+                .property{
+                    justify-content: center;
+                    padding-right: 50px;
                     
-                    img{
-                        margin-right: 20px;
-                    }
-                    
-                    .text{
-                        flex-basis: 300px;
-                        @include xlg(flex-basis, 230px);
-                        @include md(flex-basis, 300px);
-                        @include xs(flex-basis, 215px);
-                        
-                        .other{
-                            display: none;
-                        }
-                        
-                        a{
-                            color: $blue;
-                            text-decoration: none;
-                            display: inline-block;
-
-                            &:hover{
-                                text-decoration: underline;
-                            }
-                        }
-                        
-                        .btn{
-                            font-size: 14px;
-                            text-transform: none;
-                            color: $white;
-                            font-weight: normal;
-                            border-radius: 3px;
-                            text-decoration: none;
-                            padding: 3px 10px;
-                            
-                            &:hover{
-                                background-color: $blue;
-                            }
-                        }
-                        
-                        .btn.no-active{
-                            background-color: #94e0fe;
-                            border-color: #94e0fe;
-                        }
-                        
-                        li{
-                            margin-bottom: 10px;
-                        }
-                        
-                        .title{
-                            font-size: 18px;
-                            font-weight: 600;
-                            text-transform: uppercase;
-                            margin-bottom: 10px;
-                        }
-                    }
-                }
-                
-                .return{
-                    border-bottom: none;
-                    margin-bottom: 0;
-                }
-                
-                .delivery{
-                    .text{
-                        .title{
-                            display: flex;
-                            flex-wrap: wrap;
-                            align-items: center;
-                            justify-content: center;
-                            
-                            p{
-                                margin-right: 10px;
-                                @include xlg(margin-bottom, 10px);
-                                @include md(margin-bottom, 0);
-                                @include xs(margin-bottom, 10px);
-                            }
-                            
-                        }
-                    }
-                }
-                
-                .payment{
-                   @include md(border-bottom, none); 
-                   @include md(padding-bottom, 0); 
-                }
-                
-                .tests{
-                    margin-bottom: 40px;
-                    @include md(display, none);
-                    .title{
-                        text-align: center;
-                        color: $gray;
-                        font-size: 18px;
-                        font-weight: 600;
-                        text-transform: uppercase;
-                        margin-bottom: 10px;
-                    }
-                    ul{
+                    .img{
                         display: flex;
-                        flex-wrap: wrap;
-                        justify-content: space-around;
-                        align-items: flex-end;
+                        align-self: flex-end;
+                        justify-content: center;
+                    }
+                    
+                    .text{
+                        flex-basis: 0;
+                        @include xlg(flex-basis, 0);
+                        @include xs(flex-basis, 0);
+                        margin-right: 80px;
                         
-                        li{
-                            display: flex;
-                            flex-wrap: wrap;
-                            flex-direction: column;
-                            color: $gray;
-                            text-align: center;
-                            flex-basis: 90px;
-                            @include xlg(flex-basis, 80px);
-                            
-                            img{
-                                align-self: center;
-                                margin-bottom: 10px;
-                            }
-                            
-                            .name{
-                                margin-bottom: 10px;
-                            }
-                            
-                            .value{
-                                background-color: $blue;
-                                color: $white;
-                                font-size: 16px;
-                            }
+                        &:last-child{
+                            margin-right: 0;
                         }
                     }
                 }
             }
+            
+            .conditions{
+                @include size(4);
+                @include size-lg(6);
+                @include size-md(12);
+            }
+            @import "conditions";
         }
         
         .content{
