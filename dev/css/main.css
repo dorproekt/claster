@@ -992,6 +992,14 @@ main .wrapper .product .properties.modifier .properti .value .name {
   margin-bottom: 10px;
 }
 
+main .wrapper .product .properties.modifier .properti.two .value:last-child {
+  margin-left: 10px;
+}
+
+main .wrapper .product .properties.modifier .properti.two .value:first-child {
+  margin-rigth: 10px;
+}
+
 main .wrapper .product .conditions {
   width: -webkit-calc(33.33333% - 30px);
   width: calc(33.33333% - 30px);
@@ -1932,6 +1940,11 @@ footer .bottom-footer .wrapper .social-networks a {
     width: calc(50% - 30px);
   }
 
+  main .wrapper .product .properties.modifier {
+    width: -webkit-calc(50% - 30px);
+    width: calc(50% - 30px);
+  }
+
   main .wrapper .product .conditions {
     width: -webkit-calc(50% - 30px);
     width: calc(50% - 30px);
@@ -2121,6 +2134,11 @@ footer .bottom-footer .wrapper .social-networks a {
     -webkit-justify-content: start;
     -ms-flex-pack: start;
     justify-content: start;
+  }
+
+  main .wrapper .product .properties.modifier {
+    width: -webkit-calc(100% - 30px);
+    width: calc(100% - 30px);
   }
 
   main .wrapper .product .conditions {
