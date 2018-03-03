@@ -119,11 +119,60 @@ body{
 }
 
 .select.btn-big.big{
-    width: 252px;
+    /*width: 252px;*/
 }
 
 .select.btn-big.small{
-    width: 75px;
+    /*width: 75px;*/
+}
+
+.select-new{
+    display: flex;
+    align-items: start;
+    color: $gray;
+    
+    .options{
+        flex-grow: 1;
+        position: relative;
+        
+        span{
+            border: solid 1px #e3e2e2;
+            border-right: none;
+            border-radius: 5px 0 0 5px;
+            display: flex;
+            padding: 11px;
+        }
+        
+        .list-sort-params{
+            display: none;
+            position: absolute;
+            width: 100%;
+            border: solid 1px #e3e2e2;
+            border-top: none;
+            border-radius: 0 0 5px 5px;
+            box-sizing: border-box;
+            z-index: 10;
+            background-color: $white;
+            
+            li{
+                padding: 5px 0 5px 10px;
+                cursor: pointer;
+                
+                &:hover{
+                    background-color: #e3e2e2;
+                }
+            }
+        }
+    }
+    
+    .button{
+        color: $white;
+        background-color: $blue;
+        font-size: 24px;
+        padding: 5px 15px 7px 15px;
+        border-radius: 0 5px 5px 0;
+        cursor: pointer;
+    }
 }
 
 .checkbox{

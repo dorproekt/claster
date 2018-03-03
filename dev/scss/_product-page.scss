@@ -153,7 +153,33 @@ main{
                 }
             }
             
-            .imgs.modifier{
+            .properties.modifier{
+                @include size(4);
+                
+                .properti{
+                    display: flex;
+                    flex-wrap: wrap;
+                    margin-bottom: 50px;
+                    
+                    .img{
+                        margin-right: 10px;
+                        align-self: flex-end;
+                        display: flex;
+                        justify-content: center;
+                        flex-basis: 60px;
+                    }
+                    
+                    .value{
+                        flex-grow: 1;
+                        .name{
+                            font-size: 16px;
+                            color: $blue;
+                            margin-bottom: 10px;
+                        }
+                    }
+                }
+            }
+            /*.imgs.modifier{
                 @include size-xlg(3);
                 @include size-lg(12);
             }
@@ -186,7 +212,7 @@ main{
                         }
                     }
                 }
-            }
+            }*/
             
             .conditions{
                 @include size(4);

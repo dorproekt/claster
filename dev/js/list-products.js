@@ -86,6 +86,19 @@ $(document).ready(function(){
         $(this).children('.options').slideToggle(100);
     });
     
+    //select-new
+    $('.select-new .button').click(function(){
+        $(this).siblings('.options').children('.list-sort-params').slideToggle(10);
+    });
+    
+    /*$(document).click(function(){
+        $('.list-sort-params').css('display', 'none');
+    });*/
+    
+    $('.list-sort-params li').click(function(){
+        $(this).parent('.list-sort-params').slideToggle(10);
+    });//select-new
+    
     $('.option').click(function(){
         var option = $(this).html();
         $(this).parent().siblings('span').html(option);

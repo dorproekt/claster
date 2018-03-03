@@ -244,11 +244,76 @@ body {
 }
 
 .select.btn-big.big {
-  width: 252px;
+  /*width: 252px;*/
 }
 
 .select.btn-big.small {
-  width: 75px;
+  /*width: 75px;*/
+}
+
+.select-new {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -webkit-align-items: start;
+  -ms-flex-align: start;
+  align-items: start;
+  color: #747474;
+}
+
+.select-new .options {
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  position: relative;
+}
+
+.select-new .options span {
+  border: solid 1px #e3e2e2;
+  border-right: none;
+  -webkit-border-radius: 5px 0 0 5px;
+  border-radius: 5px 0 0 5px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 11px;
+}
+
+.select-new .options .list-sort-params {
+  display: none;
+  position: absolute;
+  width: 100%;
+  border: solid 1px #e3e2e2;
+  border-top: none;
+  -webkit-border-radius: 0 0 5px 5px;
+  border-radius: 0 0 5px 5px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  z-index: 10;
+  background-color: #fff;
+}
+
+.select-new .options .list-sort-params li {
+  padding: 5px 0 5px 10px;
+  cursor: pointer;
+}
+
+.select-new .options .list-sort-params li:hover {
+  background-color: #e3e2e2;
+}
+
+.select-new .button {
+  color: #fff;
+  background-color: #00a1e1;
+  font-size: 24px;
+  padding: 5px 15px 7px 15px;
+  -webkit-border-radius: 0 5px 5px 0;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
 }
 
 .checkbox i {
@@ -584,6 +649,40 @@ main .wrapper .product {
   margin-left: -15px;
   margin-right: -15px;
   margin-top: 50px;
+  /*.imgs.modifier{
+                @include size-xlg(3);
+                @include size-lg(12);
+            }
+            .prop.modifier{
+                @include size-xlg(5);
+                @include size-lg(6);
+                @include size-md(12);
+                .properties{
+                    margin-top: 0;
+                }
+                
+                .property{
+                    justify-content: center;
+                    padding-right: 50px;
+                    
+                    .img{
+                        display: flex;
+                        align-self: flex-end;
+                        justify-content: center;
+                    }
+                    
+                    .text{
+                        flex-basis: 0;
+                        @include xlg(flex-basis, 0);
+                        @include xs(flex-basis, 0);
+                        margin-right: 80px;
+                        
+                        &:last-child{
+                            margin-right: 0;
+                        }
+                    }
+                }
+            }*/
 }
 
 main .wrapper .product .elem {
@@ -846,41 +945,51 @@ main .wrapper .product .prop .properties .property .text .value {
   color: #747474;
 }
 
-main .wrapper .product .prop.modifier .properties {
-  margin-top: 0;
+main .wrapper .product .properties.modifier {
+  width: -webkit-calc(33.33333% - 30px);
+  width: calc(33.33333% - 30px);
 }
 
-main .wrapper .product .prop.modifier .property {
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  padding-right: 50px;
-}
-
-main .wrapper .product .prop.modifier .property .img {
+main .wrapper .product .properties.modifier .properti {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-bottom: 50px;
+}
+
+main .wrapper .product .properties.modifier .properti .img {
+  margin-right: 10px;
   -webkit-align-self: flex-end;
   -ms-flex-item-align: end;
   align-self: flex-end;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
+  -webkit-flex-basis: 60px;
+  -ms-flex-preferred-size: 60px;
+  flex-basis: 60px;
 }
 
-main .wrapper .product .prop.modifier .property .text {
-  -webkit-flex-basis: 0;
-  -ms-flex-preferred-size: 0;
-  flex-basis: 0;
-  margin-right: 80px;
+main .wrapper .product .properties.modifier .properti .value {
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
 }
 
-main .wrapper .product .prop.modifier .property .text:last-child {
-  margin-right: 0;
+main .wrapper .product .properties.modifier .properti .value .name {
+  font-size: 16px;
+  color: #00a1e1;
+  margin-bottom: 10px;
 }
 
 main .wrapper .product .conditions {
@@ -1752,22 +1861,6 @@ footer .bottom-footer .wrapper .social-networks a {
     flex-basis: 280px;
   }
 
-  main .wrapper .product .imgs.modifier {
-    width: -webkit-calc(25% - 30px);
-    width: calc(25% - 30px);
-  }
-
-  main .wrapper .product .prop.modifier {
-    width: -webkit-calc(41.66667% - 30px);
-    width: calc(41.66667% - 30px);
-  }
-
-  main .wrapper .product .prop.modifier .property .text {
-    -webkit-flex-basis: 0;
-    -ms-flex-preferred-size: 0;
-    flex-basis: 0;
-  }
-
   main .wrapper .product .conditions .return .text,
   main .wrapper .product .conditions .guarantee .text,
   main .wrapper .product .conditions .delivery .text,
@@ -1835,16 +1928,6 @@ footer .bottom-footer .wrapper .social-networks a {
   }
 
   main .wrapper .product .prop {
-    width: -webkit-calc(50% - 30px);
-    width: calc(50% - 30px);
-  }
-
-  main .wrapper .product .imgs.modifier {
-    width: -webkit-calc(100% - 30px);
-    width: calc(100% - 30px);
-  }
-
-  main .wrapper .product .prop.modifier {
     width: -webkit-calc(50% - 30px);
     width: calc(50% - 30px);
   }
@@ -2038,11 +2121,6 @@ footer .bottom-footer .wrapper .social-networks a {
     -webkit-justify-content: start;
     -ms-flex-pack: start;
     justify-content: start;
-  }
-
-  main .wrapper .product .prop.modifier {
-    width: -webkit-calc(100% - 30px);
-    width: calc(100% - 30px);
   }
 
   main .wrapper .product .conditions {
@@ -2334,12 +2412,6 @@ footer .bottom-footer .wrapper .social-networks a {
     -webkit-flex-basis: 220px;
     -ms-flex-preferred-size: 220px;
     flex-basis: 220px;
-  }
-
-  main .wrapper .product .prop.modifier .property .text {
-    -webkit-flex-basis: 0;
-    -ms-flex-preferred-size: 0;
-    flex-basis: 0;
   }
 
   main .wrapper .product .conditions .return .text,
