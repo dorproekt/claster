@@ -83,7 +83,7 @@ $(document).ready(function(){
     
     //select
     $('.select').click(function(){
-        $(this).children('.options').slideToggle(100);
+        $(this).children('.options').css('display', 'block');
     });
     
     //select-new
