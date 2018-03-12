@@ -95,6 +95,63 @@ $(document).ready(function(){
         $('.payment .dot').remove();
         $(this).append('<div class="dot"></div>');
     });
+    
+    //console.log();
+    
+    function  totalSum(){
+        $('.total p span').html(function(){
+            var sum = 0;
+            $('.price span').each(function(){
+                sum += +$(this).html();
+            });
+            $('.total p span').html(sum);
+
+        });
+    }
+    
+    $('.remove i').click(function(){
+        $(this).parents('tr').remove();
+        totalSum();
+    });
+    
+    totalSum(); 
+    
+    $('.plus').click(function(){
+        var cnt = +$(this).parent('.plus-minus').siblings('.num').children('input').val();
+        var price = +$(this).parents('.cnt').siblings('.price').children('span').html();
+        
+        if(cnt === 1){
+            $(this).parents('.cnt').siblings('.price').children('span').html(price + price);
+        }else{
+            $(this).parents('.cnt').siblings('.price').children('span').html(price + price/cnt);
+        }
+
+        cnt++;
+        $(this).parent('.plus-minus').siblings('.num').children('input').val(cnt);
+        totalSum();
+        
+    });
+    
+    $('.minus').click(function(){
+        var cnt = $(this).parent('.plus-minus').siblings('.num').children('input').val();
+        var price = +$(this).parents('.cnt').siblings('.price').children('span').html();
+        if(price === 0){
+            $(this).parents('.cnt').siblings('.price').children('span').html(0);
+        }else{
+            $(this).parents('.cnt').siblings('.price').children('span').html(price - price/cnt);
+        }
+        cnt--;
+
+        if(cnt < 1){
+            $(this).parent('.plus-minus').siblings('.num').children('input').val(1); 
+            $(this).parents('.cnt').siblings('.price').children('span').html(price);
+        }else{
+            $(this).parent('.plus-minus').siblings('.num').children('input').val(cnt);
+        }
+        
+        totalSum();
+        
+    });
     //order
     
     
