@@ -59,11 +59,31 @@ header{
         
         .basket{
             display: flex;
+            cursor: pointer;
             align-items: center;
             background-color: $blue;
             padding: 0 20px;
             @include md(padding, 0 10px);
             @include lg(padding, 0 5px);
+            i{
+                margin-right: 10px;
+                font-size: 24px;
+                position: relative;
+            }
+            
+            .cnt{
+                background-color: black;
+                color: azure;
+                position: absolute;
+                right: -10px;
+                bottom: -11px;
+                font-size: 16px;
+                font-weight: normal;
+                width: 18px;
+                height: 18px;
+                border-radius: 50%;
+                text-align: center;
+            }
             
             p{
                @include md(display, none); 

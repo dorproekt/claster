@@ -465,12 +465,34 @@ header .top-header .basket {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  cursor: pointer;
   -webkit-box-align: center;
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
   background-color: #00a1e1;
   padding: 0 20px;
+}
+
+header .top-header .basket i {
+  margin-right: 10px;
+  font-size: 24px;
+  position: relative;
+}
+
+header .top-header .basket .cnt {
+  background-color: black;
+  color: azure;
+  position: absolute;
+  right: -10px;
+  bottom: -11px;
+  font-size: 16px;
+  font-weight: normal;
+  width: 18px;
+  height: 18px;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  text-align: center;
 }
 
 header .top-header .language img {
@@ -3935,6 +3957,225 @@ footer .bottom-footer .wrapper .social-networks a {
   margin-left: 10px;
 }
 
+footer .modal {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.2);
+  width: 100%;
+  height: 100%;
+  z-index: 2000;
+  top: 0;
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+footer .modal .visible {
+  color: #747474;
+  background-color: #fff;
+  width: 70%;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  padding: 30px 50px;
+}
+
+footer .modal .visible .header {
+  font-size: 18px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+footer .modal .visible .header .cnt {
+  color: #00a1e1;
+}
+
+footer .modal .visible .header i {
+  font-size: 30px;
+  cursor: pointer;
+}
+
+footer .modal .visible .content table {
+  color: #747474;
+}
+
+footer .modal .visible .content table thead {
+  color: #00a1e1;
+}
+
+footer .modal .visible .content table tr {
+  border-bottom: solid 1px #ede9e9;
+}
+
+footer .modal .visible .content table tr td {
+  padding: 20px 0;
+}
+
+footer .modal .visible .content table tr .img {
+  width: 10%;
+}
+
+footer .modal .visible .content table tr .title {
+  width: 40%;
+  padding-left: 20px;
+}
+
+footer .modal .visible .content table tr .cnt {
+  width: 20%;
+}
+
+footer .modal .visible .content table tr .cnt .wrap {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+footer .modal .visible .content table tr .cnt .wrap .num {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+footer .modal .visible .content table tr .cnt .wrap .num input {
+  width: 30px;
+  border: solid 1px #ede9e9;
+  color: #747474;
+  text-align: center;
+  padding: 5px 10px;
+  -webkit-box-shadow: inset 0 3px 15px -8px rgba(0, 0, 0, 0.5);
+  box-shadow: inset 0 3px 15px -8px rgba(0, 0, 0, 0.5);
+}
+
+footer .modal .visible .content table tr .cnt .plus-minus {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+footer .modal .visible .content table tr .cnt .plus-minus div {
+  padding: 0 4px;
+  border: solid 1px #ede9e9;
+  text-align: center;
+  cursor: pointer;
+  margin-left: 2px;
+  -webkit-box-shadow: inset 0 3px 15px -8px rgba(0, 0, 0, 0.5);
+  box-shadow: inset 0 3px 15px -8px rgba(0, 0, 0, 0.5);
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+footer .modal .visible .content table tr .cnt .plus-minus .plus {
+  -webkit-border-radius: 0 5px 0 0;
+  border-radius: 0 5px 0 0;
+  margin-bottom: 1px;
+}
+
+footer .modal .visible .content table tr .cnt .plus-minus .minus {
+  -webkit-border-radius: 0 0 5px 0;
+  border-radius: 0 0 5px 0;
+}
+
+footer .modal .visible .content table tr .price {
+  width: 20%;
+  color: #00a1e1;
+  font-size: 16px;
+}
+
+footer .modal .visible .content table tr .remove {
+  width: 10%;
+  color: #d75a4a;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+footer .modal .visible .content .total {
+  font-size: 20px;
+  color: #747474;
+  font-weight: 600;
+  margin: 30px 0;
+  text-align: right;
+}
+
+footer .modal .visible .footer {
+  margin-top: 30px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+footer .modal .visible .footer .get-order {
+  background-color: #00a1e1;
+  color: #fff;
+  border: none;
+  font-size: 20px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  padding: 8px 20px;
+  -webkit-transition: .5s;
+  -o-transition: .5s;
+  transition: .5s;
+  border: solid 2px #00a1e1;
+  cursor: pointer;
+  text-align: center;
+}
+
+footer .modal .visible .footer .get-order:hover {
+  background-color: #fff;
+  color: #00a1e1;
+}
+
+footer .modal .visible .footer .continue {
+  background-color: #000f26;
+  color: #fff;
+  border: none;
+  font-size: 20px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  padding: 8px 20px;
+  -webkit-transition: .5s;
+  -o-transition: .5s;
+  transition: .5s;
+  border: solid 2px #000f26;
+  cursor: pointer;
+  text-align: center;
+}
+
+footer .modal .visible .footer .continue:hover {
+  background-color: #fff;
+  color: #000f26;
+}
+
 @media screen and (max-width: 1410px) {
   main .wrapper .product .prop .properties .property .text {
     -webkit-flex-basis: 280px;
@@ -5178,5 +5419,29 @@ footer .bottom-footer .wrapper .social-networks a {
 
   footer .bottom-footer .wrapper .social-networks p {
     display: none;
+  }
+
+  footer .modal .visible .content table tr td {
+    padding: 10px 0;
+  }
+
+  footer .modal .visible .content table tr .img {
+    width: 20%;
+  }
+
+  footer .modal .visible .content table tr .title {
+    padding-left: 10px;
+  }
+
+  footer .modal .visible .content table tr .cnt {
+    display: none;
+  }
+
+  footer .modal .visible .content table tr .price {
+    font-size: 14px;
+  }
+
+  footer .modal .visible .content table tr .remove {
+    width: 3%;
   }
 }

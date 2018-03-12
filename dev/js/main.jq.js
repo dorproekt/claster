@@ -98,23 +98,34 @@ $(document).ready(function(){
     
     //console.log();
     
-    function  totalSum(){
-        $('.total p span').html(function(){
+    function  totalSum(selector){
+        $( selector + ' ' + '.total p span').html(function(){
             var sum = 0;
-            $('.price span').each(function(){
+            $(selector + ' ' + '.price span').each(function(){
                 sum += +$(this).html();
             });
-            $('.total p span').html(sum);
+            $(selector + ' ' + '.total p span').html(sum);
 
         });
     }
     
     $('.remove i').click(function(){
         $(this).parents('tr').remove();
-        totalSum();
+        totalSum('.order');
+        totalSum('.modal');
     });
     
-    totalSum(); 
+    //close modal
+    $('.close, .continue').click(function(){
+        $(this).parents('.modal').css('display', 'none');
+    });
+    
+    $('.basket').click(function(){
+        $('.modal').css('display', 'flex');
+    });
+    
+    totalSum('.order');
+    totalSum('.modal');
     
     $('.plus').click(function(){
         var cnt = +$(this).parent('.plus-minus').siblings('.num').children('input').val();
@@ -128,7 +139,8 @@ $(document).ready(function(){
 
         cnt++;
         $(this).parent('.plus-minus').siblings('.num').children('input').val(cnt);
-        totalSum();
+        totalSum('.order');
+        totalSum('.modal');
         
     });
     
@@ -149,7 +161,8 @@ $(document).ready(function(){
             $(this).parent('.plus-minus').siblings('.num').children('input').val(cnt);
         }
         
-        totalSum();
+        totalSum('.order');
+        totalSum('.modal');
         
     });
     //order

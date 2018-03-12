@@ -16,10 +16,10 @@ const ftp = require('gulp-ftp');
 gulp.task('ftp', function () {
     return gulp.src('public/**/*')
         .pipe(ftp({
-            host: 'wwweblab.ftp.ukraine.com.ua',
-            user: 'wwweblab_tmp',
-            pass: 'tmp',
-            remotePath: '/asingle_page'
+            host: 'wwweblab.ftp.tools',
+            user: 'wwweblab_test',
+            pass: 'test',
+            remotePath: '/'
         }))
 
         .pipe(gutil.noop());
