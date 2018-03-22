@@ -82,9 +82,9 @@ $(document).ready(function(){
     });
     
     //select
-    $('.select').click(function(){
+    /*$('.select').click(function(){
         $(this).children('.options').css('display', 'block');
-    });
+    });*/
     
     //select-new
     $('.select-new .button').click(function(){
@@ -95,7 +95,7 @@ $(document).ready(function(){
         $('.list-sort-params').css('display', 'none');
     });*/
     
-    $('.list-sort-params li').click(function(){
+    /*$('.list-sort-params li').click(function(){
         $(this).parent('.list-sort-params').slideToggle(10);
     });//select-new
     
@@ -103,7 +103,7 @@ $(document).ready(function(){
         var option = $(this).html();
         $(this).parent().siblings('span').html(option);
         //console.log($(this).html());
-    });
+    });*/
     
     //show/hide filter-params
     $('.title-params i').click(function(){

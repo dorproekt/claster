@@ -30,18 +30,58 @@ $(document).ready(function(){
     });
 
 /* pursuing-goods */
-    if($('div').is('.pursuing-goods')){
+    /*if($('div').is('.pursuing-goods')){
         $('.table-block').after('<div class="test"></div>');
     
         var h1 = $('.table-block table').offset().top;
         var h2 = $('.test').offset().top;
         var h3 = $('.pursuing-goods').height();
         var h4 = h2 - h3;
+        // console.log(h1, h2, h3, h4); // 1586 2765 473.281 2291.719
         $('.test').remove();
 
         $(window).scroll(function() {
             var line = $(window).scrollTop();
+            //console.log(line);
 
+            if(line > h1){
+                $('.pursuing-goods').addClass('fix');
+                console.log(1111);
+            }
+
+            if(line > h4){
+                $('.pursuing-goods').removeClass('fix');
+                $('.pursuing-goods').addClass('abs-bottom');
+                console.log(2222);
+            }
+
+            if(line <= h4 && line > h1){
+                $('.pursuing-goods').removeClass('abs-bottom');
+                $('.pursuing-goods').addClass('fix');
+                console.log(33333);
+            }
+
+            if(line < h1){
+                $('.pursuing-goods').removeClass('fix');
+                console.log(4444);
+            }
+        });   
+    }*/
+    
+    if($('div').is('.pursuing-goods')){
+        $('.table-block').after('<div class="test"></div>');
+        var navH = $('nav').height();
+    
+        var h1 = $('.table-block table').offset().top - 2*navH;
+        var h2 = $('.test').offset().top;
+        var h3 = $('.pursuing-goods').height();
+        var h4 = h2 - h3 - 2*navH;
+
+        $('.test').remove();
+
+        $(window).scroll(function() {
+            var line = $(window).scrollTop();
+            
             if(line > h1){
                 $('.pursuing-goods').addClass('fix');
             }

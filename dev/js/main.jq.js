@@ -27,7 +27,56 @@ $(document).ready(function(){
         $(this).css('display', 'none');
         $(this).siblings('.show').css('display', 'block');
     });
+    
+    var topHeader = $('.top-header').height();
+    
+    //nav top fix
+    $(window).scroll(function() {
+        var line = $(window).scrollTop();
+        
+        if(line > topHeader){
+            $('nav').addClass('fix');
+        }else{
+            $('nav').removeClass('fix');
+        }
+        
+    });
+    
+    //select
+    $('.select').click(function(){
+        $(this).children('.options').css('display', 'block');
+    });
+    
+     $('.list-sort-params li').click(function(){
+        $(this).parent('.list-sort-params').slideToggle(10);
+    });//select-new
+    
+    $('.option').click(function(){
+        var option = $(this).html();
+        $(this).parent().siblings('span').html(option);
+        //console.log($(this).html());
+    });//select
+    
     /* menu */
+    
+    // phones
+    
+    $('.telephones img').click(function(){
+        $(this).siblings('p').addClass('mob');
+        $(this).siblings('p').slideToggle(100);
+    });
+    // phones
+    
+    // search
+    $('.search img').click(function(){
+        $(this).siblings('.search-form').slideToggle(200);
+    });
+    
+    $('#searchInp').keyup(function(e){
+        //console.log(e);
+        $('.search-result').css('display', 'flex');
+    });
+    // search
     
     //main slider
     $('#slider').slick({
@@ -96,8 +145,6 @@ $(document).ready(function(){
         $(this).append('<div class="dot"></div>');
     });
     
-    //console.log();
-    
     function  totalSum(selector){
         $( selector + ' ' + '.total p span').html(function(){
             var sum = 0;
@@ -121,7 +168,7 @@ $(document).ready(function(){
     });
     
     $('.basket').click(function(){
-        $('.modal').css('display', 'flex');
+        $('#basket.modal').css('display', 'flex');
     });
     
     totalSum('.order');
@@ -166,6 +213,24 @@ $(document).ready(function(){
         
     });
     //order
+    
+    //list products
+    
+    //add to cart
+    
+    $('.buy input').click(function(){
+        $('#addToCart.modal').css('display', 'flex');
+    });
+    
+    $('.buy input').click(function(){
+        $('#addToCart.modal').css('display', 'flex');
+    });
+    
+    $('.request-call').click(function(){
+        $('#requestСall.modal').css('display', 'flex');
+    });
+    
+    //list products
     
     
     

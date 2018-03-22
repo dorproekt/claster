@@ -39,8 +39,31 @@ header{
         }
         
         .telephones{
+            position: relative;
+            i{
+                margin-right: 10px;
+                font-size: 22px;
+                transform: rotate(90deg);
+            }
             p{
                 @include md(display, none);
+            }
+            p.mob{
+                position: absolute;
+                display: none;
+                top: 40px;
+                @include xs(top, 30px);
+                z-index: 1000;
+                width: 120px;
+                right: -50px;
+                background: #fff;
+                color: $gray;
+                text-align: center;
+                border-top: solid 2px $blue;
+                box-shadow: 0 2px 4px rgba(0,0,0,.2);
+                span{
+                    width: 100%;
+                }
             }
         }
         
@@ -55,6 +78,78 @@ header{
         
         .search{
             cursor: pointer;
+            font-size: 28px;
+            position: relative;
+            
+            .search-form{
+                display: none;
+                border-top: solid 4px $blue; 
+                flex-direction: column;
+                width: 350px;
+                position: absolute;
+                top: 62px;
+                right: -175px;
+                @include xs(width, 320px);
+                @include xs(top, 37px);
+                @include xs(right, -100px);
+                background-color: #fff;
+                z-index: 9000;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+                padding: 10px 15px;
+                
+                form{
+                    display: flex;
+                    justify-content: center;
+                    
+                    .inp{
+                        box-sizing: border-box;
+                        /*background-color: #f7f8f8;*/
+                        background-color: #fff;
+                        border: solid 1px #e3e2e2;
+                        border-radius: 5px 0 0 5px;
+                        padding: 8px;
+                        font-size: 16px;
+                        box-shadow: inset 0 3px 15px -10px rgba(0,0,0,.5);
+                        color: $gray;
+                        width: 100%;
+                    }
+                    
+                    .btn{
+                        font-size: 18px;
+                        border-radius: 3px;
+                        padding: 5px 15px;
+                        border-radius: 0 5px 5px 0;
+                    }
+                }
+                
+                .search-result{
+                    display: flex;
+                    display: none;
+                    flex-direction: column;
+                    .item{
+                        .link{
+                            a{
+                                color: $blue;
+                                font-size: 14px;
+                            }
+                        }
+                        
+                        .price{
+                            color: $gray;
+                            font-size: 14px;
+                            margin: 0 10px;
+                        }
+                        
+                        img{
+                            width: 50px;
+                        }
+                    }
+                }
+            }
+            
+            /*.search-form::after{
+
+            }*/
         }
         
         .basket{
@@ -91,14 +186,38 @@ header{
         }
         
         .compare{
-            @include md(display, none); 
+            @include md(display, none);
+            i{
+                margin-right: 10px;
+                font-size: 24px;
+            }
         }
         
         .language{
+            .select{
+                border: none;
+                span{
+                    width: 35px;
+                    @include xs(width, 20px);
+                }
+                .options{
+                    color: $gray;
+                    padding: 0;
+                    /*@include md(padding, 0);*/
+                    .option{
+                        @include xs(padding, 2px 0);
+                        @include xs(text-align, center);
+                    }
+                }
+            }
+            /*i{
+                margin-left: 10px;
+            }
             img{
                 width: 100%;
                 margin-left: 5px;
-            }
+            }*/
+            
         }
     }
     
@@ -197,4 +316,22 @@ header{
         }
     }
     
+    nav.fix{
+        position: fixed;
+        @include md(position, relative);
+        width: 100%;
+        background: rgba(255, 255, 255, 1);
+        top: 0;
+        left: 0;
+        padding: 0;
+        box-shadow: 0 6px 4px -4px rgba(0, 0, 0, .2);
+        z-index: 1;
+        
+        .menu{
+            margin: 0 40px;
+            .submenu{
+                 box-shadow: 0 2px 4px rgba(0, 0, 0, .2);
+            }
+        }
+    }
 }
