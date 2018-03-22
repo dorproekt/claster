@@ -1,4 +1,4 @@
-$(document).ready(function(){
+/*$(document).ready(function(){
 
     $('.delivery .radio').click(function(){
         $('.delivery .dot').remove();
@@ -10,4 +10,4 @@ $(document).ready(function(){
         $(this).append('<div class="dot"></div>');
     });
     
-});
+});*/

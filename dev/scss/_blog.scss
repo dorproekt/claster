@@ -1,0 +1,67 @@
+main{
+    @import "breadcrumb";
+    @import "title-page";
+    .wrapper{
+        @include wrapper-full();
+        
+        .blog{
+            @include row-flex();
+            
+            article{
+                @include col();
+                @include size(4);
+                @include size-md(6);
+                @include size-sm(12);
+                padding-top: 50px;
+                font-size: 16px;
+                color: $gray;
+                
+                .img{
+                    text-align: center;
+                }
+                
+                .date{
+                     margin: 20px 0;
+                }
+                
+                .title{
+                    margin: 20px 0;
+                    
+                    h2{
+                        font-size: 18px;
+                        font-weight: 600;
+                    }
+                }
+                
+                .description{
+                    font-size: 14px;
+                    text-align: justify;
+                    margin: 20px 0;
+                }
+                
+                .detail{
+                    text-align: right;
+                    margin: 20px 0;
+                    a{
+                        color: $blue;
+                        text-decoration: none;
+                        &:hover{
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+        }
+        .upload{
+            text-align: center;
+            margin: 30px 0 50px 0;
+            
+            .btn{
+                text-align: center;
+                font-size: 20px;
+                padding: 20px 40px;
+                @include xs(padding, 10px 20px);
+            }
+        }
+    }
+}

@@ -1,6 +1,6 @@
 $(document).ready(function(){
     
-    $('.slider-product').slick({
+    /*$('.slider-product').slick({
         slidesToShow: 1,
         autoplaySpeed: 5000,
         slidesToScroll: 1,
@@ -27,7 +27,7 @@ $(document).ready(function(){
         var activeClass = '.' + $(this).attr('href').slice(1);
         
         $(activeClass).css('display', 'block');
-    });
+    });*/
 
 /* pursuing-goods */
     /*if($('div').is('.pursuing-goods')){
@@ -68,43 +68,11 @@ $(document).ready(function(){
         });   
     }*/
     
-    if($('div').is('.pursuing-goods')){
-        $('.table-block').after('<div class="test"></div>');
-        var navH = $('nav').height();
     
-        var h1 = $('.table-block table').offset().top - 2*navH;
-        var h2 = $('.test').offset().top;
-        var h3 = $('.pursuing-goods').height();
-        var h4 = h2 - h3 - 2*navH;
-
-        $('.test').remove();
-
-        $(window).scroll(function() {
-            var line = $(window).scrollTop();
-            
-            if(line > h1){
-                $('.pursuing-goods').addClass('fix');
-            }
-
-            if(line > h4){
-                $('.pursuing-goods').removeClass('fix');
-                $('.pursuing-goods').addClass('abs-bottom');
-            }
-
-            if(line <= h4 && line > h1){
-                $('.pursuing-goods').removeClass('abs-bottom');
-                $('.pursuing-goods').addClass('fix');
-            }
-
-            if(line < h1){
-                $('.pursuing-goods').removeClass('fix');
-            }
-        });   
-    }
 /* pursuing-goods */
       
 /* tab/accordion */
-    var widthScreen = screen.width;
+    /*var widthScreen = screen.width;
     
     if(widthScreen >= 1200){
         $( "#content" ).tabs();
@@ -120,7 +88,7 @@ $(document).ready(function(){
     $('.arrow').click(function(){
         console.log($(this).parent('.info').siblings('.title').attr('class'));
         $(this).parents('.body').siblings('.title').slideToggle(400);
-    });
+    });*/
 /* tab/accordion */
     
 });

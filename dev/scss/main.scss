@@ -254,7 +254,13 @@ input{
     }
 }
 
+.icon{
+    background-image: url(../img/sprite.png);
+    background-repeat: no-repeat;
+}
+
 @import "header";
+@import "blog";
 @import "index";
 @import "contacts";
 @import "list-products";
