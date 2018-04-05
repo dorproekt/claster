@@ -90,7 +90,9 @@ $(document).ready(function(){
         autoplaySpeed: 4000,
         speed: 1500,
         prevArrow: '<img class="control prev" src="img/prev.png" alt=""/>',
+        // prevArrow: '<img class="control prev" src="/bitrix/templates/klaster/img/prev.png" alt=""/>',
         nextArrow: '<img class="control next" src="img/next.png" alt=""/>',
+        // nextArrow: '<img class="control next" src="/bitrix/templates/klaster/img/next.png" alt=""/>',
     });
     //main slider
     

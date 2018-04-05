@@ -411,10 +411,10 @@ input:active {
   border-left: solid 1px #00a1e1;
 }
 
-.icon {
-  background-image: url(../img/sprite.png);
-  background-repeat: no-repeat;
-}
+/*.icon{
+    background-image: url(../img/sprite.png);
+    background-repeat: no-repeat;
+}*/
 
 header .top-header {
   padding-left: 40px;
@@ -724,6 +724,8 @@ header nav .menu li.item .submenu {
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   padding-bottom: 25px;
+  -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 header nav .menu li.item .submenu li {
@@ -1654,7 +1656,6 @@ main .wrapper .contacts .feedback form div.submit {
 }
 
 main .wrapper .contacts .feedback form div.submit .btn {
-  border: none;
   padding: 15px 40px;
 }
 
@@ -4152,7 +4153,10 @@ footer .top-footer .wrapper {
   justify-content: space-around;
 }
 
-footer .top-footer .wrapper div {
+footer .top-footer .wrapper .contacts,
+footer .top-footer .wrapper .shops,
+footer .top-footer .wrapper .for-clients,
+footer .top-footer .wrapper .newsletter {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   word-wrap: break-word;
@@ -4732,7 +4736,10 @@ footer #requestСall.modal form .submit .btn {
     margin-top: 20px;
   }
 
-  footer .top-footer .wrapper div {
+  footer .top-footer .wrapper .contacts,
+  footer .top-footer .wrapper .shops,
+  footer .top-footer .wrapper .for-clients,
+  footer .top-footer .wrapper .newsletter {
     width: -webkit-calc(25% - 30px);
     width: calc(25% - 30px);
   }
@@ -5256,7 +5263,10 @@ footer #requestСall.modal form .submit .btn {
     margin: 0 -40px 0 0;
   }
 
-  footer .top-footer .wrapper div {
+  footer .top-footer .wrapper .contacts,
+  footer .top-footer .wrapper .shops,
+  footer .top-footer .wrapper .for-clients,
+  footer .top-footer .wrapper .newsletter {
     width: -webkit-calc(50% - 30px);
     width: calc(50% - 30px);
   }
@@ -5848,7 +5858,10 @@ footer #requestСall.modal form .submit .btn {
     width: 40px;
   }
 
-  footer .top-footer .wrapper div {
+  footer .top-footer .wrapper .contacts,
+  footer .top-footer .wrapper .shops,
+  footer .top-footer .wrapper .for-clients,
+  footer .top-footer .wrapper .newsletter {
     width: -webkit-calc(100% - 30px);
     width: calc(100% - 30px);
   }
