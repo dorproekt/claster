@@ -416,6 +416,18 @@ input:active {
     background-repeat: no-repeat;
 }*/
 
+.load {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.2);
+  width: 100%;
+  height: 100%;
+  z-index: 3000;
+  top: 0;
+  background-image: url(../img/25.gif);
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
 header .top-header {
   padding-left: 40px;
   padding-right: 40px;
@@ -604,6 +616,7 @@ header .top-header .basket i {
   margin-right: 10px;
   font-size: 24px;
   position: relative;
+  font-style: normal;
 }
 
 header .top-header .basket .cnt {
@@ -611,7 +624,7 @@ header .top-header .basket .cnt {
   color: azure;
   position: absolute;
   right: -10px;
-  bottom: -11px;
+  bottom: -20px;
   font-size: 16px;
   font-weight: normal;
   width: 18px;
@@ -619,6 +632,8 @@ header .top-header .basket .cnt {
   -webkit-border-radius: 50%;
   border-radius: 50%;
   text-align: center;
+  padding: 2px;
+  display: none;
 }
 
 header .top-header .compare i {
@@ -4541,6 +4556,34 @@ footer #requestСall.modal form .submit .btn {
   padding: 5px 20px;
   -webkit-border-radius: 5px;
   border-radius: 5px;
+}
+
+footer #addToBasket.modal {
+  display: none;
+}
+
+footer #addToBasket.modal .visible {
+  width: 40%;
+}
+
+footer #addToBasket.modal .header span.sum {
+  color: #00a1e1;
+}
+
+footer #addToBasket.modal .content {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+footer #addToBasket.modal .content h2 {
+  font-size: 20px;
+  margin-left: 20px;
 }
 
 @media screen and (max-width: 1410px) {

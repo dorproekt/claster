@@ -31,7 +31,7 @@ $(document).ready(function(){
     var topHeader = $('.top-header').height();
     
     //nav top fix
-    $(window).scroll(function() {
+    /*$(window).scroll(function() {
         var line = $(window).scrollTop();
         
         if(line > topHeader){
@@ -40,7 +40,7 @@ $(document).ready(function(){
             $('nav').removeClass('fix');
         }
         
-    });
+    });*/
     
     //select
     $('.select').click(function(){
@@ -89,10 +89,10 @@ $(document).ready(function(){
         autoplay: true,
         autoplaySpeed: 4000,
         speed: 1500,
-        prevArrow: '<img class="control prev" src="img/prev.png" alt=""/>',
-        // prevArrow: '<img class="control prev" src="/bitrix/templates/klaster/img/prev.png" alt=""/>',
-        nextArrow: '<img class="control next" src="img/next.png" alt=""/>',
-        // nextArrow: '<img class="control next" src="/bitrix/templates/klaster/img/next.png" alt=""/>',
+        //prevArrow: '<img class="control prev" src="img/prev.png" alt=""/>',
+        prevArrow: '<img class="control prev" src="/bitrix/templates/klaster/img/prev.png" alt=""/>',
+        //nextArrow: '<img class="control next" src="img/next.png" alt=""/>',
+        nextArrow: '<img class="control next" src="/bitrix/templates/klaster/img/next.png" alt=""/>',
     });
     //main slider
     
@@ -156,7 +156,7 @@ $(document).ready(function(){
         $(this).append('<div class="dot"></div>');
     });
     
-    function  totalSum(selector){
+    /*function  totalSum(selector){
         $( selector + ' ' + '.total p span').html(function(){
             var sum = 0;
             $(selector + ' ' + '.price span').each(function(){
@@ -165,27 +165,27 @@ $(document).ready(function(){
             $(selector + ' ' + '.total p span').html(sum);
 
         });
-    }
+    }*/
     
-    $('.remove i').click(function(){
+    /*$('.remove i').click(function(){
         $(this).parents('tr').remove();
         totalSum('.order');
         totalSum('.modal');
-    });
+    });*/
     
     //close modal
-    $('.close, .continue').click(function(){
+    /*$('.close, .continue').click(function(){
         $(this).parents('.modal').css('display', 'none');
-    });
+    });*/
     
-    $('.basket').click(function(){
+    /*$('.basket').click(function(){
         $('#basket.modal').css('display', 'flex');
-    });
+    });*/
     
-    totalSum('.order');
-    totalSum('.modal');
+    //totalSum('.order');
+    //totalSum('.modal');
     
-    $('.plus').click(function(){
+    /*$('.plus').click(function(){
         var cnt = +$(this).parent('.plus-minus').siblings('.num').children('input').val();
         var price = +$(this).parents('.cnt').siblings('.price').children('span').html();
         
@@ -200,9 +200,9 @@ $(document).ready(function(){
         totalSum('.order');
         totalSum('.modal');
         
-    });
+    });*/
     
-    $('.minus').click(function(){
+    /*$('.minus').click(function(){
         var cnt = $(this).parent('.plus-minus').siblings('.num').children('input').val();
         var price = +$(this).parents('.cnt').siblings('.price').children('span').html();
         if(price === 0){
@@ -222,7 +222,7 @@ $(document).ready(function(){
         totalSum('.order');
         totalSum('.modal');
         
-    });
+    });*/
     //order
     
     /* list products */
@@ -283,7 +283,7 @@ $(document).ready(function(){
     });
     
     //remove filter-active
-    $('.list-active-filters').on('click', function(e){
+    /*$('.list-active-filters').on('click', function(e){
         
         if(e.target.tagName === 'I'){
             
@@ -297,14 +297,14 @@ $(document).ready(function(){
             $(e.target).parents('.filter-active').remove();
 
         }
-    });
+    });*/
     
     //reset filter-active
-    $('.reset').click(function(){
+    /*$('.reset').click(function(){
         $('.list-active-filters li.filter-active').remove();
         $('li.reset').css('display', 'none');
         $('.value-params i').removeClass('active');
-    });
+    });*/
     
     //show/hide filter-params
     $('.title-params i').click(function(){
@@ -347,7 +347,7 @@ $(document).ready(function(){
     
     /* slider price */
     
-    if($("div").is("#prices")){
+    /*if($("div").is("#prices")){
         $( "#prices" ).slider({
             range: true,
             min: 0,
@@ -370,7 +370,7 @@ $(document).ready(function(){
                 $( "#prices" ).slider("option", "values",  [min, max]);
             }
         });
-    }
+    }*/
     
     /* slider price */
     
@@ -413,8 +413,10 @@ $(document).ready(function(){
         slidesToScroll: 1,
         arrows: true,
         fade: true,
-        prevArrow: '<img class="control prev" src="img/prev-slide.png" alt=""/>',
-        nextArrow: '<img class="control next" src="img/next-slide.png" alt=""/>',
+       // prevArrow: '<img class="control prev" src="img/prev-slide.png" alt=""/>',
+        prevArrow: '<img class="control prev" src="/bitrix/templates/klaster/img/prev-slide.png" alt=""/>',
+        //nextArrow: '<img class="control next" src="img/next-slide.png" alt=""/>',
+        nextArrow: '<img class="control next" src="/bitrix/templates/klaster/img/next-slide.png" alt=""/>',
         asNavFor: '.slider-nav-product',
         autoplay: false
     });

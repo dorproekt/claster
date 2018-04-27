@@ -319,4 +319,27 @@ footer{
             }
         }
     }
+    
+    #addToBasket.modal{
+        display: none;
+        
+        .visible{
+            width: 40%;
+        }
+        
+        .header{
+            span.sum{
+                color: $blue;
+            }
+        }
+        .content{
+            display: flex;
+            align-items: center;
+            
+            h2{
+                font-size: 20px;
+                margin-left: 20px;
+            }
+        }
+    }
 }
