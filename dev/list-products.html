@@ -39,8 +39,14 @@
                 <p>Корзина</p>
             </div>
             <div class="compare">
-                <img class="icon" src="img/heart-icon.jpg" alt="heart">
-                <img class="icon" src="img/libra-icon.jpg" alt="libra">
+                <div class="wish-header">
+                    <img class="icon" src="img/heart-icon.jpg" alt="heart">
+                    <i><span class="cnt">1</span></i>
+                </div>
+                <div class="libra-header">
+                    <img class="icon" src="img/libra-icon.jpg" alt="libra">
+                    <i><span class="cnt">1</span></i>
+                </div>
             </div>
             <div class="language">
                 <p>
@@ -943,6 +949,47 @@
                 <div class="footer">
                     <input type="submit" class="continue" value="Продолжить покупки">
                     <input type="submit" class="get-order" value="Оформить заказ">
+                </div>
+            </div>
+        </div>
+        <div class="modal" id="wishList">
+            <div class="visible">
+                <div class="header">
+                    <p>Список желаний</p>
+                    <i class="far fa-times-circle close"></i>
+                </div>
+                <div class="content">
+                    <table>
+                        <thead>
+                            <td class="img"></td>
+                            <td class="title">Название</td>
+                            <td class="price">Цена</td>
+                            <td class="remove"></td>
+                        </thead>
+                        <tr>
+                            <td class="img">
+                                <a href="#">
+                                    <img src="img/product-1.png" alt="product-1">
+                                </a>
+                            </td>
+                            <td class="title">Рабочая станция WS-Dual E5-2450</td>
+                            <td class="price"><span>18000</span> грн</td>
+                            <td class="remove"><i class="fas fa-times-circle"></i></td>
+                        </tr>
+                        <tr>
+                            <td class="img">
+                                <a href="#">
+                                    <img src="img/product-1.png" alt="product-1">
+                                </a>
+                            </td>
+                            <td class="title">Рабочая станция WS-Dual E5-2450</td>
+                            <td class="price"><span>17000</span> грн</td>
+                            <td class="remove"><i class="fas fa-times-circle"></i></td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="footer">
+                    <input type="submit" class="continue" value="Продолжить покупки">
                 </div>
             </div>
         </div>

@@ -1,0 +1,73 @@
+.payment-delivery{
+    padding-top: 20px;
+    
+    .terms{
+        p{
+            color: #969696;
+            margin: 30px 0;
+        }
+        ul{
+            display: flex;
+            li{
+                color: $gray;
+                font-size: 16px;
+                margin-right: 30px;
+                i{
+                    color: $blue;
+                    margin-right: 10px;
+                }
+            }
+        }
+    }
+    
+    h2{
+        color: $blue;
+        font-size: 25px;
+        text-align: center;
+        margin-bottom: 60px;
+    }
+    
+    .deliverys{
+        display: flex;
+        flex-wrap: wrap;
+        
+        .delivery{
+            flex-basis: 25%;
+            display: flex;
+            flex-direction: column;
+            
+            .img{
+                text-align: center;
+            }
+            .title{
+                text-align: center;
+                h3{
+                    font-size: 18px;
+                    color: $gray;
+                }
+            }
+            .description{
+                color: $gray;
+                font-size: 14px;
+                text-align: center;
+                a{
+                    color: $blue;
+                }
+            }
+        }
+    }
+    
+    .payment-methods-info{
+        display: flex;
+        flex-wrap: wrap;
+        
+        .payment-methods{
+            flex-basis: 50%;
+            
+        }
+        
+        .info{
+            flex-basis: 50%;
+        }
+    }
+}

@@ -146,15 +146,19 @@ $(document).ready(function(){
     //zoom img
     
     //order
+    
+    /*$('.delivery .radio:first').append('<div class="dot"></div>');
+    
     $('.delivery .radio').click(function(){
         $('.delivery .dot').remove();
         $(this).append('<div class="dot"></div>');
+        
     });
     
     $('.payment .radio').click(function(){
         $('.payment .dot').remove();
         $(this).append('<div class="dot"></div>');
-    });
+    });*/
     
     /*function  totalSum(selector){
         $( selector + ' ' + '.total p span').html(function(){
@@ -497,9 +501,6 @@ $(document).ready(function(){
     });
     // tab/accordion
     
-    /* product */
+    /* product */    
     
-    
-    
-});   
-   
+}); 

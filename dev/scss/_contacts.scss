@@ -174,6 +174,17 @@ main{
                         }
                     }
                 }
+                
+                .error{
+                    margin-bottom: 15px;
+                    color: #dc3545;
+                    text-align: center;
+                }
+                .success{
+                    margin-bottom: 15px;
+                    color: $blue;
+                    text-align: center;
+                }
             }
         }
     }

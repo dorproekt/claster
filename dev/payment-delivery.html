@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Claster</title>
+    <title>Claster - Блог</title>
     <meta name="viewport" content="width=device-width">
-    <meta name="description" content="Claster">
+    <meta name="description" content="Claster - Блог">
     <meta charset="utf-8">
+    <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
     <!-- build:css css/main.min.css -->
     <link rel="stylesheet" href="css/main.css">
     <!-- endbuild -->
@@ -91,84 +92,99 @@
     <main>
         <ul class="breadcrumb">
             <li class="breadcrumb-item"><a href="#"><img src="img/home-icon.png" alt="">Главная</a></li>
-            <li class="breadcrumb-item active" aria-current="page"><img src="img/right-arrow-icon.png" alt="">Контакты</li>
+            <li class="breadcrumb-item active" aria-current="page"><img src="img/right-arrow-icon.png" alt="">Оплата и доставка</li>
         </ul>
         <div class="title-page">
-            <h1>Контакты</h1>
+            <h1>Оплата и доставка</h1>
         </div>
         <div class="wrapper">
-            <div class="contacts">
-                <div class="left-bar elem">
-                    <div class="call-us">
-                        <img src="img/phone-blue.png" alt="phone-blue">
-                        <h2>Звоните нам</h2>
+            <div class="payment-delivery">
+                <div class="terms">
+                    <p>Компания осуществляет бесплатную доставку своей продукции по территории Украины в сжатые сроки:</p>
+                    <ul>
+                        <li><i class="fas fa-check-square"></i>по Киеву и области - в течении 1-го рабочего дня;</li>
+                        <li><i class="fas fa-check-square"></i>по Украине* - до 3-х рабочих дней.</li>
+                    </ul>
+                    <p>*кроме временно оккупированой территории.</p>
+                </div>
+                <h2>Способы доставки</h2>
+                <div class="deliverys">
+                    <div class="delivery">
+                        <div class="img">
+                            <img src="img/pickup.png" alt="Офис - Самовывоз">
+                        </div>
+                        <div class="title">
+                            <h3>Офис - Самовывоз</h3>
+                        </div>
+                        <div class="description">
+                            Забрать заказ можно из офиса по адресу:<br>
+                            Киев, ул. Магнитогорская, 1Б, <a href="/contacts/">(карта)</a>
+                        </div>
                     </div>
-                    <div class="wrap-phones">
-                        <div class="sales-dep">
-                            <h3>Отдел продаж:</h3>
-                            <ul>
-                                <li>+38 (097) 609 74 04</li>
-                                <li>+38 (097) 609 74 04</li>
-                            </ul>
+                    <div class="delivery">
+                        <div class="img">
+                            <img src="img/nova-poshta.png" alt="Доставка «Нова Пошта»">
                         </div>
-                        <div class="service-dep">
-                            <h3>Отдел сервиса:</h3>
-                            <ul>
-                                <li>+38 (097) 609 74 04</li>
-                                <li>+38 (097) 609 74 04</li>
-                            </ul>
+                        <div class="title">
+                            <h3>Доставка «Нова Пошта»</h3>
+                        </div>
+                        <div class="description">
+                            Доставка заказа в отделение «Нова пошта» по территории Украины или курьером компании по указанному адресу. 
                         </div>
                     </div>
-                    <div class="wrap-info">
-                        <div class="write-us">
-                            <img src="img/mail-blue-icon.png" alt="mail-blue">
-                            <h2>Пишите нам</h2>
-                            <ul>
-                                <li>info-info@mail.ua</li>
-                            </ul>
+                    <div class="delivery">
+                        <div class="img">
+                            <img src="img/mist-express.png" alt="«Міст Експрес» (машина мист+курьер)»">
                         </div>
-                        <div class="schedule">
-                            <img src="img/clock-icon.png" alt="mail-blue">
-                            <h2>График работы</h2>
-                            <ul>
-                                <li>Пн-Пт 9:00-18:00</li>
-                                <li>Сб-Вс 10:00-15:00</li>
-                            </ul>
+                        <div class="title">
+                            <h3>«Міст Експрес» (машина мист + курьер)</h3>
+                        </div>
+                        <div class="description">
+                            Доставка заказа в отделение «Міст Експрес» по территории Украины или курьером компании по указанному адресу. 
+                        </div>
+                    </div>
+                    <div class="delivery">
+                        <div class="img">
+                            <img src="img/courier.png" alt="Доставка курьером">
+                        </div>
+                        <div class="title">
+                            <h3>Доставка курьером</h3>
+                        </div>
+                        <div class="description">
+                            Адресная доставка по Киеву и области транспортной службой компании «Кластер».  
                         </div>
                     </div>
                 </div>
-                <div class="right-bar elem">
-                    <div class="location">
-                        <img src="img/location.png" alt="location">
-                        <h2>Наш адрес</h2>
+                <div class="payment-methods-info">
+                    <div class="payment-methods">
+                        <h3>Способы оплаты</h3>
+                        <div class="payment">
+                            <div class="img">
+                                <img src="img/cards.png" alt="Безналичными/Visa и MasterCard">
+                            </div>
+                            <div class="title">
+                                <h3>Безналичными/Visa и MasterCard</h3>
+                            </div>
+                            <div class="description">При выборе безналичного способа оплаты доставка заказа возможна после поступления средств на наш расчетный счет.</div>
+                        </div>
+                        <div class="payment">
+                            <div class="img">
+                                <img src="img/cash.png" alt="Наличными">
+                            </div>
+                            <div class="title">
+                                <h3>Наличными</h3>
+                            </div>
+                            <div class="description">Оплата наличными при получении продукции</div>
+                        </div>
                     </div>
-                    <div class="map">
-                        <address>02094, г. Киев, ул. Магнитогорская, 1Б</address>
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1270.1651237281044!2d30.64040165820814!3d50.453574702640935!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTDCsDI3JzEyLjkiTiAzMMKwMzgnMjkuNCJF!5e0!3m2!1sru!2sua!4v1518791032973" width="100%" height="550" frameborder="0" style="border:0" allowfullscreen></iframe>
+                    <div class="info">
+                        <h4>Доставка продукции возможна только после подтверждения платежа.</h4>
+                        <ul>
+                            <li><img src="img/!.png" alt="">При выборе способа доставки продукции посредством курьерских служб (Нова пошта, Міст Експрес) проверяйте комплектацию и внешний вид вашего заказа.</li>
+                            <li><img src="img/!.png" alt="">При обнаружении повреждения, или неполной комплектации заказа необходимо отказаться от его получения и оплаты. Обязательно сообщите нам о случившемся по одному из телефонов:</li>
+                        </ul>
+                        <p>+38 (097) 609 74 04  /  +38 (095) 033 15 12  /  +38 (093) 144 35 17</p>
                     </div>
-                </div>
-                <div class="feedback elem">
-                    <p>Есть вопросы? Напишите нам письмо!</p>
-                    <form>
-                        <div class="form-group">
-                            <label for="nameInput">Имя</label>
-                            <input type="text" id="nameInput">
-                        </div>
-
-                        <div class="form-group">
-                            <label for="emailInput">Email</label>
-                            <input type="text" id="emailInput">
-                        </div>
-                        <textarea name="messageTextarea" id="messageTextarea" cols="30" rows="10"></textarea>
-                        <div class="submit">
-                            <input type="submit" class="btn" value="Отправить">
-                        </div>
-                    </form>
-                    <!--<ul class="error">
-                        <li>Не коректный email</li>
-                        <li>Не коректный email</li>
-                    </ul>-->
-                    <!--<div class="success">Ваше сообщение успешно отправлено.</div>-->
                 </div>
             </div>
         </div>
@@ -212,13 +228,6 @@
                         <input type="text" placeholder="Введите email">
                         <input type="submit" class="button" value="">
                     </form>
-                    <!--<ul class="error">
-                        <li>Не работает</li>
-                        <li>Не работает</li>
-                    </ul>-->
-                    <div class="success">
-                        Вы подписаны!
-                    </div>
                 </div>
             </div>
         </div>

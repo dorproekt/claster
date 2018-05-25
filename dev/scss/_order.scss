@@ -7,6 +7,17 @@ main{
     }
     
     .order{
+        .empty{
+            min-height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            
+            p{
+                font-size: 22px;
+                color: $blue;
+            }
+        }
         table{
             color: $gray;
             thead{
@@ -201,6 +212,14 @@ main{
                                 text-decoration: underline;
                             }
                         }
+                    }
+                }
+                .error-form{
+                    text-align: right;
+                    color: #dc3545;
+                    p{
+                        padding: 7px 0 0 0;
+                        font-size: 16px;
                     }
                 }
             }

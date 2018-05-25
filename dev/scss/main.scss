@@ -11,6 +11,7 @@ $gray: #747474;
 $gray-light: #f7f8f8;
 $green: #0abe00;
 $gl: #ede9e9;
+$gray-text: #959595;
 
 body{
     font-family: Roboto, Verdana;
@@ -272,6 +273,8 @@ input{
 }
 
 @import "header";
+@import "article";
+@import "payment-delivery";
 @import "blog";
 @import "index";
 @import "contacts";

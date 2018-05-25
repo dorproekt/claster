@@ -87,6 +87,19 @@ footer{
                         cursor: pointer;
                     }
                 }
+                .error{
+                    color: #dc3545;
+                    margin-top: 10px;
+                    li{
+                        margin: 0;
+                        font-size: 14px;
+                    }
+                }
+                
+                .success{
+                    margin-top: 10px;
+                    font-size: 14px;
+                }
             }
         }
     }
@@ -136,6 +149,7 @@ footer{
             @include xs(width, 90%);
             border-radius: 3px;
             padding: 30px 50px;
+            overflow: auto;
             @include xs(padding, 30px 10px);
             
             .header{
