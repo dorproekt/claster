@@ -215,6 +215,9 @@ main{
                 margin-bottom: 15px;
                 overflow: hidden;
                 
+                &:hover{
+                   cursor: pointer;
+                }
                 img{
                     vertical-align:bottom;
                     width: 100%;

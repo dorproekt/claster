@@ -52,16 +52,26 @@ $(document).ready(function(){
         $(this).siblings('.options').children('.list-sort-params').slideToggle(10);
     });
     
-     $('.list-sort-params li').click(function(){
+    /*$('.list-sort-params li').click(function(){
+        $(this).parent('.list-sort-params').slideToggle(10);
+    });*/
+    
+    $('.list-sort-params').on('click', 'li', function(){
         $(this).parent('.list-sort-params').slideToggle(10);
     });
     //select-new
     
-    $('.option').click(function(){
+    /*$('.option').click(function(){
         var option = $(this).html();
         $(this).parent().siblings('span').html(option);
         //console.log($(this).html());
-    });//select
+    });*/
+    
+    $('.list-sort-params').on('click', '.option', function(){
+        var option = $(this).html();
+        $(this).parent().siblings('span').html(option);
+    });
+    //select
     
     /* menu */
     
@@ -330,7 +340,7 @@ $(document).ready(function(){
     });
     
     //add filter params
-    $('.checkbox i').click(function(){
+   /* $('.checkbox i').click(function(){
         var filterParam = $(this).siblings('span').html();
         var idFilterParam = filterParam.split(' ').join('_');
         $(this).parents('.checkbox').attr('id', idFilterParam + '_filter');
@@ -347,7 +357,7 @@ $(document).ready(function(){
             $(this).removeClass('active');
             $('#' + idFilterParam).remove();
         }
-    });
+    });*/
     
     /* slider price */
     
@@ -501,6 +511,28 @@ $(document).ready(function(){
     });
     // tab/accordion
     
-    /* product */    
+    /* product */
+    
+    /*
+    * my tab
+    */
+    
+    $( '.tab' ).click(function() {
+        var id = $(this).attr('data-id');
+        var context = $(this);
+        
+        if(context.children("i").attr('class') === 'fas fa-angle-down'){
+            context.children("i").attr('class', 'fas fa-angle-up');
+        }else{
+            context.children("i").attr('class', 'fas fa-angle-down');
+        }
+        
+        
+        $( '#' + id ).slideToggle( "slow", function() {
+        });
+    });
+    /*
+    * my tab
+    */
     
 }); 

@@ -1,0 +1,60 @@
+.service{
+    color: $gray;
+    
+    .service-header{
+        padding: 50px 0;
+        font-size: 16px;
+        text-align: justify;
+        line-height: 1.5;
+        border-bottom: solid 1px #ede9e9;
+    }
+    .service-body{
+        h2{
+            color: $blue;
+            text-align: center;
+            font-size: 25px;
+            margin: 50px 0;
+        }
+        img{
+            float: left;
+            margin-right: 40px;
+        }
+        p{
+            font-size: 16px;
+            line-height: 1.5;
+            text-align: justify;
+            margin: 40px 0;
+        }
+        p.other-margin{
+            margin: 40px 0 20px 0;
+        }
+        
+        ul{
+            li{
+                margin: 0 0 20px 0;
+                font-size: 16px;
+                i{
+                    color: $blue;
+                    margin-right: 10px;
+                }
+            }
+        }
+        
+        .tab{
+            background-color: $blue;
+            color: $white;
+            font-size: 22px;
+            padding: 20px 30px;
+            border-radius: 10px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px; 
+        }
+        
+        .tab-content{
+            display: none;
+        }
+    }
+}

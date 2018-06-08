@@ -1,0 +1,40 @@
+.about-page{
+    color: $gray;
+    
+    .about-main{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin: 50px 0;
+        .logo{
+            @include md(margin-bottom, 35px);
+        }
+        
+        .desc{
+            width: 65%;
+            @include lg(width, 55%);
+            @include md(width, 100%);
+            margin: 0;
+            font-size: 16px;
+            align-self: flex-end;
+            
+            p{
+                margin-bottom: 35px;
+            }
+            ul{
+                li{
+                    margin-bottom: 25px;
+                    
+                    &:last-child{
+                        margin-bottom: 0;
+                    }
+                    
+                    i{
+                        color: $blue;
+                        margin-right: 10px;
+                    }
+                }
+            }
+        }
+    }
+}

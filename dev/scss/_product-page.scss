@@ -191,6 +191,14 @@ main{
                         }
                     }
                 }
+                
+                .calc-btn{
+                    text-align: center;
+                    .btn{
+                        padding: 15px 60px;
+                        margin: 0 0 50px;
+                    }
+                }
             }
             /*.imgs.modifier{
                 @include size-xlg(3);
@@ -231,6 +239,12 @@ main{
                 @include size(4);
                 @include size-lg(6);
                 @include size-md(12);
+            }
+            
+            .modifier{
+                .price, .buy{
+                    display: none;
+                }
             }
             @import "conditions";
         }

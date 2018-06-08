@@ -1,5 +1,6 @@
 .payment-delivery{
     padding-top: 20px;
+    margin-bottom: 50px;
     
     .terms{
         p{
@@ -8,6 +9,7 @@
         }
         ul{
             display: flex;
+            @include md(flex-direction, column);
             li{
                 color: $gray;
                 font-size: 16px;
@@ -32,7 +34,11 @@
         flex-wrap: wrap;
         
         .delivery{
-            flex-basis: 25%;
+            width: calc(25% - 30px);
+            @include lg(width, calc(50% - 30px));
+            @include xs(width, calc(100% - 30px));
+            box-sizing: border-box;
+            margin: 0 15px;
             display: flex;
             flex-direction: column;
             
@@ -41,6 +47,7 @@
             }
             .title{
                 text-align: center;
+                margin: 30px 0;
                 h3{
                     font-size: 18px;
                     color: $gray;
@@ -50,6 +57,7 @@
                 color: $gray;
                 font-size: 14px;
                 text-align: center;
+                margin: 0 0 50px 0;
                 a{
                     color: $blue;
                 }
@@ -62,12 +70,82 @@
         flex-wrap: wrap;
         
         .payment-methods{
-            flex-basis: 50%;
-            
+            width: 50%;
+            @include lg(width, 100%);
+            h2{
+                color: $blue;
+                font-size: 25px;
+            }
+            .paymants{
+                display: flex;
+                flex-wrap: wrap;
+                
+                .payment{
+                    width: 50%;
+                    @include xs(width, 100%);
+                    display: flex;
+                    flex-direction: column;
+                    
+                    .img{
+                        text-align: center;
+                    }
+                    .title{
+                        text-align: center;
+                        margin: 30px 0;
+                        h3{
+                            font-size: 18px;
+                            color: $gray;
+                        }
+                    }
+                    .description{
+                        color: $gray;
+                        font-size: 14px;
+                        text-align: center;
+                        margin: 0 0 50px 0;
+                        padding: 0 30px;
+                        a{
+                            color: $blue;
+                        }
+                    }   
+                }
+            }
         }
         
         .info{
-            flex-basis: 50%;
+            width: 50%;
+            @include lg(width, 100%);
+            background-color: #f5f5f5;
+            padding: 50px;
+            @include xs(padding, 5px);
+            box-sizing: border-box;
+            
+            h4{
+                font-size: 18px;
+                text-align: center;
+                margin-bottom: 50px;
+                color: $gray;
+                font-weight: 600;
+            }
+            
+            ul{
+                li{
+                    display: flex;
+                    font-size: 16px;
+                    color: $gray;
+                    align-items: center;
+                    margin-bottom: 50px;
+                    img{
+                        margin-right: 20px;
+                    }
+                }
+            }
+            
+            p{
+                font-size: 18px;
+                color: $gray;
+                font-weight: 600;
+                text-align: center;
+            }
         }
     }
 }
