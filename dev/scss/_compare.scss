@@ -1,0 +1,115 @@
+.compare{
+    .general-information{
+        min-height: 500px;
+        margin: 50px 0;
+        font-size: 16px;
+        color: $gray;
+        line-height: 1.6;
+        
+        table{
+            width: 100%;
+            thead{
+                tr{
+                    box-shadow: 0 6px 4px -4px rgba(0, 0, 0, .2);
+                    td{
+                        padding-bottom: 50px;
+                    }
+                }
+            }
+            
+            tr{
+                td.text{
+                    width: 30%;
+                    padding-right: 15px;
+                }
+                td.prod{
+                    padding-right: 15px;
+                    
+                    &:last-child{
+                        padding-right: 0;
+                    }
+                    .card{
+                        display: flex;
+                        flex-direction: column;
+                        box-shadow: 0 0 10px 3px rgba(238,238,238,.7);
+                        border: 1px solid #eee;
+                        padding: 10px 10px 10px 0;
+                        
+                        .header{
+                            text-align: right;
+                            i{
+                                cursor: pointer;
+                            }
+                        }
+                    }
+                    .body{
+                        display: flex;
+                        line-height: 1.1;
+                        align-items: center;
+                        
+                        .img{
+                            width: 50px;
+                            margin-right: 15px;
+                            margin-left: 30px;
+                        }
+                        
+                        a{
+                            font-size: 16px;
+                            color: $black;
+                             @include lg(font-size, 14px);
+                             @include lg(margin-left, 15px);
+                        }
+                    }
+                    
+                    .footer{
+                        display: flex;
+                        flex-wrap: wrap;
+                        align-items: center;
+                        justify-content: space-between;
+                        @include xlg(justify-content, center);
+                        margin-top: 15px;
+                        
+                        .price{
+                            padding-left: 30px;
+                            padding-right: 30px;
+                            margin-right: 10px;
+                            background-color: #00a1e1;
+                            color: $white;
+                        }
+                        .buy{
+                            margin: 10px 0;
+                            .btn{
+                                padding: 6px 35px;
+                                font-size: 16px;
+                            }
+                        }
+                    }
+                }
+            }
+            tbody{
+                tr.name{
+                    font-size: 20px;
+                    font-weight: bold;
+                    td{
+                        padding: 30px 0 10px 25px;
+                        border: none;
+                    }
+                    &:nth-child(odd){
+                        background-color: #fff;
+                    }
+                }
+                
+                tr{
+                    &:nth-child(odd){
+                        background-color: #f4f4f5;
+                    }
+                    td{
+                        padding: 5px 0 5px 25px;
+                        border: solid 1px #ede9e9;
+                        border-left: none;
+                    }
+                }
+            }
+        }
+    }
+}

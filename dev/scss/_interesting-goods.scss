@@ -17,7 +17,9 @@
     }
 
     @import "product";
-
+    .description{
+        min-height: 50px;
+    }
     .product{
         margin: 0 20px 40px 20px;
     }

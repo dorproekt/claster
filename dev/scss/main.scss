@@ -154,6 +154,8 @@ body{
             box-sizing: border-box;
             z-index: 10;
             background-color: $white;
+            max-height: 200px;
+            overflow: auto;
             
             li{
                 padding: 5px 0 5px 10px;
@@ -274,6 +276,7 @@ input{
 
 @import "header";
 @import "article";
+@import "compare";
 @import "about";
 @import "payment-delivery";
 @import "service";

@@ -31,7 +31,7 @@ $(document).ready(function(){
     var topHeader = $('.top-header').height();
     
     //nav top fix
-    /*$(window).scroll(function() {
+    $(window).scroll(function() {
         var line = $(window).scrollTop();
         
         if(line > topHeader){
@@ -40,7 +40,7 @@ $(document).ready(function(){
             $('nav').removeClass('fix');
         }
         
-    });*/
+    });
     
     //select
     $('.select').click(function(){
@@ -98,6 +98,7 @@ $(document).ready(function(){
         dots: true,
         autoplay: true,
         autoplaySpeed: 4000,
+        infinite: true,
         speed: 1500,
         //prevArrow: '<img class="control prev" src="img/prev.png" alt=""/>',
         prevArrow: '<img class="control prev" src="/bitrix/templates/klaster/img/prev.png" alt=""/>',
@@ -114,7 +115,7 @@ $(document).ready(function(){
         infinite: true,
         slidesToShow: 5,
         slidesToScroll: 5,
-        arrows: false,
+        arrows: false,   
         responsive: [
             {
                 breakpoint: 992,
@@ -249,8 +250,10 @@ $(document).ready(function(){
         infinite: true,
         slidesToShow: 4,
         slidesToScroll: 4,
-        prevArrow: '<img class="control left" src="img/black-arrow-left.png" alt="black-arrow-right"/>',
-        nextArrow: '<img class="control right" src="img/black-arrow-right.png" alt="black-arrow-left"/>',
+        //prevArrow: '<img class="control left" src="img/black-arrow-left.png" alt="black-arrow-right"/>',
+        prevArrow: '<img class="control left" src="/bitrix/templates/klaster/img/black-arrow-left.png" alt="black-arrow-right"/>',
+        //nextArrow: '<img class="control right" src="img/black-arrow-right.png" alt="black-arrow-left"/>',
+        nextArrow: '<img class="control right" src="/bitrix/templates/klaster/img/black-arrow-right.png" alt="black-arrow-left"/>',
         responsive: [
             {
                 breakpoint: 992,
@@ -444,12 +447,17 @@ $(document).ready(function(){
     });
     
     // cities
-    $('.city a').click(function(){
-        console.log($(this).attr('href').slice(1));
-        var activeClass = '.' + $(this).attr('href').slice(1);
+    /*$('.city a').click(function(){
         
+        $('.city a').each(function(i, e){
+            $(e).addClass('no-active');
+        });
+        
+        $(this).removeClass('no-active');
+        $('.text ul').css('display', 'none');
+        var activeClass = '.' + $(this).attr('href').slice(1);
         $(activeClass).css('display', 'block');
-    });
+    });*/
     
     // pursuing-goods
     if($('div').is('.pursuing-goods')){
@@ -535,4 +543,16 @@ $(document).ready(function(){
     * my tab
     */
     
+    /*function f(){
+        
+        return function(){
+            let a = 3;
+            return function(){
+                return a += a;
+            }
+        }
+    }
+    console.log(f()()() === 3, f()()());
+    console.log(f()()() === 6, f()()());
+    console.log(f()()() === 9, f()()());*/
 }); 

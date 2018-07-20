@@ -55,3 +55,14 @@
         padding: 40px 0 20px 0;
     }
 }
+
+.sharer-page{
+    @include lg(display, none);
+    padding: 40px 0 0 0;
+    
+    display: flex;
+    
+    .g{
+        margin-left: 15px;
+    }
+}

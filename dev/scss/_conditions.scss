@@ -23,7 +23,7 @@
         }
 
         .text{
-            flex-basis: 300px;
+            flex-basis: 310px;
             @include xlg(flex-basis, 230px);
             @include md(flex-basis, 300px);
             @include xs(flex-basis, 215px);
@@ -70,6 +70,9 @@
                 font-weight: 600;
                 text-transform: uppercase;
                 margin-bottom: 10px;
+            }
+            p{
+                text-align: left;
             }
         }
     }

@@ -43,6 +43,9 @@ footer{
                 @include size-xs(12);
             }
             .contacts{
+                li{
+                    font-size: 16px;
+                }
                 img{
                     margin-right: 10px;
                 }
@@ -257,7 +260,7 @@ footer{
                 flex-wrap: wrap;
                 justify-content: space-between;
                 @include xs(justify-content, center);
-                .get-order{
+                .get-order, .orderBtn{
                     background-color: $blue;
                     color: $white;
                     border: none;
@@ -350,9 +353,81 @@ footer{
             display: flex;
             align-items: center;
             
+            img{
+                max-height: 300px;
+            }
+            
             h2{
                 font-size: 20px;
                 margin-left: 20px;
+            }
+        }
+    }
+    
+    #success.modal{
+        display: none;
+        
+        .visible{
+            width: 30%;
+            @include md(width, 70%);
+            
+            .header{
+                justify-content: flex-end;
+                margin-bottom: 15px;
+            }
+            .content{
+                .smile i{
+                    font-size: 60px;
+                    color: yellow;
+                }
+                .thank{
+                    color: $blue;
+                    font-size: 26px;
+                }
+                
+                p{
+                    text-align: center;
+                    font-size: 16px;
+                    margin-bottom: 15px;
+                    span{
+                        color: $blue;
+                        font-size: 18px;
+                    }
+                }
+            }
+        }
+    }
+    
+    #confirm.modal{
+        display: none;
+        
+        .visible{
+            width: 30%;
+            @include xlg(width, 70%);
+            @include xs(width, 90%);
+            
+            .header{
+                p{
+                    font-size: 26px;
+                    font-weight: 600;
+                    flex-grow: 1;
+                    text-align: center;
+                }
+            }
+            
+            .content{
+                table{
+                    width: 100%;
+                    tr td:first-child{
+                        font-size: 18px;
+                        font-weight: 600;
+                        width: 20%;
+                    }
+                    
+                    tr td{
+                        font-size: 18px;
+                    }
+                }
             }
         }
     }

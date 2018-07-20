@@ -241,11 +241,11 @@ main{
                 @include size-md(12);
             }
             
-            .modifier{
+            /*.modifier{
                 .price, .buy{
                     display: none;
                 }
-            }
+            }*/
             @import "conditions";
         }
         
